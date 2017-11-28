@@ -1,0 +1,918 @@
+/* 나눔고딕 */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+/* font-family: 'Nanum Gothic', serif; */
+
+/* 제주고딕 */
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+/* font-family: 'Jeju Gothic', sans-serif; */
+
+/* Open Sans */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800);
+/* font-family:'Open Sans', sans-serif; */
+
+body { margin:0; padding:0; font-family:'Nanum Gothic', serif; font-size:12px;  }
+input, button, select, textarea { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+button { cursor:pointer; }
+button img, img { vertical-align:middle; }
+.fLeft { float:left; margin-right:5px; }
+.fRight { float:right; margin-left:5px; }
+.Left { text-align:left !important; margin-right:5px !important; }
+.Right { text-align:right; margin-left:5px; }
+input[readonly="readonly"]{ background:#f8f8f8; }
+strong.red, span.red, label.red { color:#c73333 !important; }
+strong.blue, span.blue, label.blue { color:#2665ae !important; }
+
+/* 공통 Top */
+#GNB h1, #GNB h2, #GNB h3, #GNB h4, #GNB h5, #GNB ul, #GNB li,
+#LNB h1, #LNB h2, #LNB h3, #LNB h4, #LNB h5, #LNB ul, #LNB li,
+#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer ul, #footer li { margin:0; padding:0; }
+
+/* 공통GNB */
+#Header { height:30px; width:100%; min-width:1000px; }
+#Header > div { width:980px; height:30px; margin:0 auto; padding:0 10px; text-align:right; font-size:12px; }
+#Header > div button { padding:0; margin:0; border:none; background:none; line-height:30px; vertical-align:middle; font-weight:bold; font-size:12px;  }
+#Header > div button + button { margin-left:2px; padding-left:8px; background-repeat:no-repeat; background-position:left center; }
+#Header > div button.favoriteBtn  { margin-left:9px; padding-left:18px; }
+#Header > div button:hover { text-decoration:underline; }
+
+#GNB { position:absolute; left:0; overflow:hidden; width:100%; min-width:1000px; }
+#GNB > div { overflow:hidden; width:1000px; height:81px; margin:0 auto; }
+#GNB a { position:absolute; margin-left:10px; border:none; text-decoration:none; color:#343434; font-family: 'Jeju Gothic', sans-serif; font-size:30px; font-weight:bold; }
+#GNB a img { border:none; }
+/* GNB Main */
+#GNB ul, #GNB ol, #GNB li { display:block; list-style:none; padding:0; margin:0; }
+#GNB ul { clear:both; float:right; margin:3px 10px 0; }
+#GNB ul > li { float:left; overflow:hidden; margin:29px 0 0 75px; cursor:pointer; }
+#GNB ul h1 { padding:0 5px; line-height:46px; font-size:18px; font-weight:bold; font-family: 'Jeju Gothic', sans-serif; }
+#GNB ul > li > h1 { border-bottom-width:3px; border-bottom-style:solid; }
+#GNB ol { padding:5px 0 15px; }
+#GNB ol li { line-height:28px; text-align:center; font-family: 'Jeju Gothic', sans-serif; }
+/*#GNB ol li:hover { font-weight:bold; }*/
+/*#GNB ul:hover ol { display:block; }*/
+
+/* footer */
+#footer { overflow:hidden; width:980px; margin:10px auto; padding:20px 10px; border-top:1px solid #ccc; background:#fff; }
+#footer img { float:left; margin-right:36px; }
+#footer ul, #footer li { display:block; margin:0; padding:0; }
+#footer ul { overflow:hidden; margin:0 0 10px; }
+#footer li { float:left; margin-right:15px; line-height:14px; font-weight:bold; color:#999; cursor:pointer; }
+#footer li:hover { color:#666; }
+#footer li + li { padding-left:15px; border-left:2px solid #999; }
+#footer address { overflow:hidden; line-height:18px; color:#999; font-style:normal; }
+
+/* 메인 */
+#main_contents { width:1000px; margin:80px auto 0; }
+#main_contents > img { margin:10px 0; }
+#main_contents > ul, #main_contents > ul li { margin:0; padding:0; list-style:none;}
+#main_contents > ul { overflow:hidden; margin:0 auto 10px; }
+#main_contents > ul > li { float:left; display:inline-block; width:320px; background:#fff; border:1px solid #e7edee; }
+#main_contents > ul > li + li { margin-left:17px; }
+#main_contents > ul > li > h1 { margin:0; padding:0 10px; border-bottom:1px solid #e7edee; color:#999; font-size:12px; line-height:45px; }
+#main_contents > ul > li > h1 > strong { color:#fff; font-size:15px; }
+#main_contents > ul > li > h1 button { float:right; height:25px; margin:10px 0; padding:0 10px; border:none; font-weight:bold; line-height:26px; color:#efefef; }
+
+.mooyoungCss #mooyoungFloat {float:left;}
+.mooyoungCss #dateInfoMargin li {margin-left:18px;}
+.mooyoungCss #mooyoungFloat .myInformation	{height:206px;}
+.mooyoungCss #mooyoungFloat .myInformation	h1 {padding:10px;}
+.mooyoungCss #mooyoungFloat ul	{margin:0;}
+.mooyoungCss #mooyoungFloat .myInformation li	{height:136px;}
+.mooyoungCss #mooyoungFloat .myInformation li>div	{margin:38px auto 12px;}
+
+.mooyoungCss #mooyoungFloat .loginArea	{height:206px;}
+.mooyoungCss #mooyoungFloat .loginArea	h1 {padding:7px 15px;}
+.mooyoungCss #mooyoungFloat .loginArea	form {padding:29px 15px;}
+
+.mooyoungCss #dateInfoMargin .CSCenter {height:207px; background-image:url(../images/studycenter/bg_cscenter_mooyoung.png)}
+.mooyoungCss #dateInfoMargin .CSCenter h1 {margin-top:20px;}
+.mooyoungCss #dateInfoMargin .CSCenter h2 {font-size:35px;}
+
+/* 로그인 */
+#main_contents li.loginArea, #main_contents li.myInformation { overflow:hidden; height:152px; margin-bottom:10px;}
+#main_contents li.loginArea > h1 { margin:0; padding:0 15px; font-family:'Open Sans', sans-serif; font-weight:400; font-size:15px; line-height:30px; }
+#main_contents li.loginArea > form { padding:10px 15px; }
+#main_contents li.loginArea > form input { width:195px; height:34px; border:1px solid #ccc; padding:0 5px; color:#ccc; }
+#main_contents li.loginArea > form br + input { border-top:none; }
+#main_contents li.loginArea > form > button { float:right; width:95px; height:68px; border:none; background-image:url(../images/main/btn_login.png); background-repeat:no-repeat; background-position:center 8px; font-weight:bold; font-size:15px; line-height:110px; }
+#main_contents li.loginArea > form div { margin-top:8px; padding-top:8px; border-top:1px dashed #ccc; text-align:left; }
+#main_contents li.loginArea > form div button { border:none; background:none; color:#999; font-weight:bold; }
+/* 개인정보영역 */
+#main_contents li.myInformation > ul, #main_contents li.myInformation li { overflow:hidden; margin:0; padding:0; }
+/*#main_contents li.myInformation li { float:left; width:106px; height:100px; border-bottom:3px solid #fafbfb; background:#fafbfb; text-align:center; font-size:12px; font-weight:bold; color:#999; cursor:pointer; }*/
+#main_contents li.myInformation li { float:left; width:159px; height:100px; border-bottom:3px solid #fafbfb; background:#fafbfb; text-align:center; font-size:12px; font-weight:bold; color:#999; cursor:pointer; }
+#main_contents li.myInformation li > div { overflow:hidden; width:37px; height:32px; margin:20px auto 12px; }
+#main_contents li.myInformation li > div img { margin-top:0;  }
+#main_contents li.myInformation li + li { border-left:1px solid #e7edee; }
+#main_contents li.myInformation li:hover { border-bottom-width:5px; border-bottom-style:solid; background:#fff; }
+#main_contents li.myInformation li:hover img { margin-top:-32px; }
+/* 버튼모양 */
+#main_contents li.btnBlock { overflow:hidden; position:relative; height:84px; /*margin-top:-134px;*/ margin-top:-86px; margin-left:0; cursor:pointer; }
+#main_contents li.btnBlock div { float:right; width:64px; height:64px; margin:10px; background-image:url(../images/studycenter/btn_mainlink.png); background-position:center; background-repeat:no-repeat; }
+#main_contents li.btnBlock h1, #main_contents li.btnBlock h2 { display:inline-block; margin:0 0 0 10px; padding:0; }
+#main_contents li.btnBlock h2 { font-size:13px; color:#787878; margin:18px 0 5px 10px; }
+#main_contents li.btnBlock h1 { font-size:20px; line-height:24px; border:none; }
+/*#main_contents li.btnBlock + li { margin-top:-62px; }*/
+/* 수강기간 */
+#main_contents li.dateInfo { height:250px; border:none; }
+#main_contents li.dateInfo h2 { height:43px; padding:0 10px; margin:0 0 1px; line-height:43px; font-size:15px; }
+#main_contents li.dateInfo ul { height:164px; margin:0 0 1px; padding:0 10px; background:url(../images/studycenter/bg_mainblock.png); }
+#main_contents li.dateInfo ul li { padding-top:22px; color:#999; font-size:12px; font-weight:bold; }
+#main_contents li.dateInfo ul li h3 { margin:8px 0 0 0; padding:0; font-size:20px; line-height:24px; font-weight:800; }
+#main_contents li.dateInfo button { display:block; width:320px; height:43px; padding:0 10px; border:none; background:url(../images/studycenter/btn_mainnext.png) no-repeat 280px center #5d5d64; font-size:15px; font-weight:bold; text-align:left; }
+/* 추천과정 */
+#main_contents li.favoriteStudy { width:639px; height:230px; padding:10px; }
+#main_contents li.favoriteStudy > img { float:left; width:308px; height:230px; margin-right:20px; }
+#main_contents li.favoriteStudy > h3 { margin:20px 0 15px; padding:0; font-size:15px; color:#666; }
+#main_contents li.favoriteStudy > h2 { overflow:hidden; margin:0 0 8px; white-space:nowrap; text-overflow:ellipsis; font-size:18px; }
+#main_contents li.favoriteStudy > p { overflow:hidden; height:90px; margin-bottom:9px; line-height:18px; color:#666; }
+#main_contents li.favoriteStudy > button { width:140px; height:45px; border:none; font-weight:bold; font-size:15px; }
+#main_contents li.favoriteStudy > button.btnPreview { width:165px; }
+/* 게시판영역 */
+#main_contents li.BBSArea { height:250px; }
+#main_contents li.BBSArea > h1 span { padding-left:10px; font-size:15px; font-family:'Open Sans', sans-serif; font-weight:200; }
+#main_contents li.BBSArea > h1 button { width:25px; padding:0; font-size:20px; }
+#main_contents li.BBSArea > ul { padding:10px; }
+#main_contents li.BBSArea > ul li { color:#999; cursor:pointer; }
+#main_contents li.BBSArea > ul li + li { margin-top:5px;  }
+#main_contents li.BBSArea > ul li > h1 { overflow:hidden; white-space:nowrap; font-size:12px; text-overflow:ellipsis; }
+#main_contents li.BBSArea > ul li:hover { text-decoration:underline; }
+/* 고객센터 */
+#main_contents li.CSCenter { height:250px; background-image:url(../images/studycenter/bg_cscenter.png); background-repeat:no-repeat; background-position:right 8px; color:#fff; }
+#main_contents li.CSCenter > h1, #main_contents li.CSCenter > h2, #main_contents li.CSCenter > table { margin:0 0 0 20px; padding:0; }
+#main_contents li.CSCenter > h1 { margin-top:35px; font-size:30px; font-size:22px; color:#fff; border:none; }
+#main_contents li.CSCenter > h2 { margin-bottom:10px; font-size:44px; font-family:'Open Sans', sans-serif; }
+#main_contents li.CSCenter > table { border-collapse:collapse; }
+#main_contents li.CSCenter > table th, #main_contents li.CSCenter > table td { padding:8px 0; vertical-align:top; line-height:18px; font-size:15px; }
+#main_contents li.CSCenter > table th { width:74px; font-weight:bold; text-align:left; }
+
+/* 기본레이아웃 */
+/* 컨텐츠 영역 공통 선언 */
+#wrap { overflow:hidden; width:1000px; margin:90px auto 0; }
+#contents { overflow:hidden; min-height:680px; border:1px solid #d2d9db; background:#fff; }
+/* 컨텐츠 영역 공통 제목부 */
+#titleArea { overflow:hidden; height:120px; padding:0 20px; background-position:94% top; background-repeat:no-repeat; background-color:#f8f8f8; border-bottom:1px solid #d2d9db; }
+#titleArea h1, #titleArea h2, #titleArea h3 { margin:0; padding:0; }
+#titleArea h2 { margin:15px 0 8px; font-size:12px; color:#999999; font-weight:normal; }
+#titleArea h2 strong, #titleArea h3 strong { font-size:12px; color:#565656; }
+#titleArea h2 img { margin:0 5px; }
+#titleArea h1 { margin-bottom:16px; font-size:30px; }
+#titleArea h3 { font-size:12px; color:#565656; font-weight:normal; }
+
+/* 컨텐츠 영역 snb */
+#snb, #snb li { overflow:hidden; margin:0; padding:0; list-style:none; }
+#snb { padding:10px 20px; border-bottom:1px solid #cdcdcd; }
+#snb li { float:left; min-width:12%; margin:0 5px 5px 0; padding:0 10px; border:1px solid #eee; text-align:center; line-height:37px; font-weight:800; color:#565656; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing: border-box; cursor:pointer; }
+
+/* 강의듣기페이지 */
+#wrap.study div#titleArea h3 { padding-left:20px; background:url(../images/studycenter/bg_title_h3.png) no-repeat left center; }
+#wrap.study div#contents div.noticeArea { overflow:hidden; margin:15px 20px; padding:15px; background:url(../images/study/bg_notice.png); color:#eaecf7; line-height:18px; }
+#wrap.study div.noticeArea img { float:right; margin-top:5px; }
+#wrap.study div.noticeArea h1, #wrap.study div#contents div.noticeArea p { margin:0; padding:0; }
+#wrap.study div.noticeArea h1 { margin-bottom:5px; font-size:15px; color:#fff; }
+#wrap.study div.noticeArea strong { color:#ffdc61; }
+
+/* 과정정보 */
+#wrap.study div#contentsArea ul, #wrap.study div#contentsArea li { list-style:none; margin:0; padding:0; }
+#wrap.study div#contentsArea { padding:0 20px 20px; }
+#wrap.study div#contentsArea > ul > li { overflow:hidden; margin-bottom:10px; border:1px solid #bfc3c4; border-top:4px solid #cfcfcf; background:url(../images/study/bg_study.png); }
+#wrap.study div.summuryArea { overflow:hidden; background:#fff; cursor:pointer; }
+#wrap.study div.summuryArea > div, #wrap.study div.summuryArea img { width:128px; height:96px; }
+#wrap.study div.summuryArea img { float:left; margin:10px; }
+#wrap.study div.summuryArea > div { position:absolute; margin:10px; background:url(../images/study/bg_summeryimg.png); }
+#wrap.study div.summuryArea > h1, #wrap.study div.summuryArea > h2, #wrap.study div.summuryArea > h3  { overflow:hidden; float:left; display:inline-block; width:460px; margin:0; padding:0; white-space:nowrap; text-overflow:ellipsis; color:#999; }
+#wrap.study div.summuryArea > h1 { line-height:24px; font-size:20px; margin-top:20px; }
+#wrap.study div.summuryArea > h2 { line-height:18px; font-size:15px; margin-top:5px; }
+#wrap.study div.summuryArea > h3 { line-height:15px; font-size:12px; margin-top:12px; }
+#wrap.study div.summuryArea > h3 strong { display:inline-block; padding:0 8px; margin-left:15px; border-radius:4px; line-height:18px; color:#fff; }
+#wrap.study div.summuryArea ul { float:right;  }
+#wrap.study div.summuryArea li { float:left; width:104px; height:116px; border-left:1px solid #bfc3c4; background:#f5f5f5; text-align:center; color:#999; font-size:20px; line-height:76px; }
+#wrap.study div.summuryArea li strong { font-size:30px; font-family:'Open Sans', sans-serif; font-weight:700; }
+#wrap.study div.summuryArea li > h1 { height:40px; margin:0; padding:0; border-bottom:1px solid #bfc3c4;line-height:40px; color:#343434; font-size:12px; }
+#wrap.study div.summuryArea li.smallText > h1 { margin-bottom:5px; }
+#wrap.study div.summuryArea li.smallText { font-size:15px; line-height:30px; }
+#wrap.study div.summuryArea li.smallText strong { font-size:20px; }
+#wrap.study div.summuryArea li button.epilogue { overflow:hidden; width:80px; height:70px; border:none; background:url(../images/study/btn_write.png) no-repeat center top; line-height:108px; font-size:15px; font-weight:700; color:#999; }
+#wrap.study div.summuryArea li button.epilogue:hover { background:url(../images/study/btn_write.png) no-repeat center bottom; color:#2665ae;  }
+#wrap.study div#contentsArea > ul > li > button { width:100%; height:24px; border:none; background-color:#a5a9aa; background-repeat:no-repeat; background-position:center bottom; background-image:url(../images/study/btn_studyopen.png); }
+#wrap.study div#contentsArea > ul > li.openClass > button { background-image:url(../images/study/btn_studyclose.png); }
+#wrap.study div#contentsArea > ul > li:hover > button { background-position:center top; }
+#wrap.study div#contentsArea > ul > li > ul { overflow:hidden; margin:15px 10px 15px; border:1px solid #bfc3c4; background:#fff; }
+#wrap.study div#contentsArea > ul > li > ul li { float:left; width:180.6px; height:68px; padding:20px 10px 20px 120px; margin:0; background-repeat:no-repeat; background-position:30px center; line-height:22px; cursor:pointer; }
+#wrap.study div#contentsArea > ul > li > ul li h1 { margin:0; padding:0; font-size:12px; }
+#wrap.study div#contentsArea > ul > li > ul li strong { font-size:15px; }
+#wrap.study div#contentsArea > ul > li > ul li span { color:#787878; }
+#wrap.study div#contentsArea > ul > li > ul li a { color:#2665ae; }
+#wrap.study div#contentsArea > ul > li > ul li a:after { content:' >' }
+#wrap.study div#contentsArea > ul > li > ul li + li { border-left:1px solid #bfc3c4; }
+#wrap.study div#contentsArea > ul > li > ul li.middleTest { background-image:url(../images/study/img_test01_small.png); }
+#wrap.study div#contentsArea > ul > li > ul li.lastTest { background-image:url(../images/study/img_test02_small.png); }
+#wrap.study div#contentsArea > ul > li > ul li.report { background-image:url(../images/study/img_report_small.png); }
+#wrap.study div#contentsArea > ul > li > ul li:hover { background-color:#efefef; }
+#wrap.study div#contentsArea > ul > li table { width:936px; margin:0 10px 5px; border-collapse:collapse; background:#fff; border:1px solid #bfc3c4; border-bottom:none; }
+#wrap.study div#contentsArea > ul > li table th, #wrap.study div#contentsArea > ul > li table td { height:48px; border-bottom:1px solid #bfc3c4; border-top:1px solid #bfc3c4; }
+#wrap.study div#contentsArea > ul > li table th { text-align:left; font-weight:normal; line-height:18px; padding:10px 0; color:#565656; }
+#wrap.study div#contentsArea > ul > li table th strong { color:#343434; font-size:14px; word-break:break-all; }
+#wrap.study div#contentsArea > ul > li table td { text-align:center; }
+#wrap.study div#contentsArea > ul > li table button { overflow:hidden; height:25px; margin-right:10px; padding:0; border:none; background:none; }
+#wrap.study div#contentsArea > ul > li table button img { margin-top:-25px; }
+#wrap.study div#contentsArea > ul > li table button:hover img { margin-top:0; }
+#wrap.study div#contentsArea > ul > li table.passCheck { margin-top:15px; }
+#wrap.study div#contentsArea > ul > li table.passCheck th,
+#wrap.study div#contentsArea > ul > li table.passCheck td { height:30px; padding:0; text-align:center; border:1px solid #bfc3c4; }
+#wrap.study div#contentsArea > ul > li table.passCheck th { color:#343434; }
+#wrap.study div#contentsArea > ul > li table.passCheck td.title { color:#fff; font-weight:bold; }
+#wrap.study div#contentsArea > ul > li table.passCheck td.downFile, #wrap.study div#contentsArea > ul > li > table.passCheck td.detailView { width:120px; }
+#wrap.study div#contentsArea > ul > li table.passCheck td a { color:#343434; text-decoration:none; }
+#wrap.study div#contentsArea > ul > li table.passCheck td.downFile h1, #wrap.study div#contentsArea > ul > li > table.passCheck td.detailView h1 { font-size:14px; margin:0; padding-top:80px; background-repeat:no-repeat; background-position:center top; }
+#wrap.study div#contentsArea > ul > li table.passCheck td.downFile h1 { background-image:url(../images/study/img_filedown.png); }
+#wrap.study div#contentsArea > ul > li table.passCheck td.detailView h1 { background-image:url(../images/study/img_contdetail.png); }
+#wrap.study div#contentsArea > ul > li table.passCheck td.downFile:hover, #wrap.study div#contentsArea > ul > li > table.passCheck td.detailView:hover { text-decoration:underline; background:#efefef; }
+#wrap.study div#contentsArea > ul > li.noList { height:120px; background:#efefef; line-height:120px; font-size:15px; border:1px solid #ccc; text-align:center; font-weight:bold; }
+
+#wrap.study .openClass div.summuryArea { border-bottom:1px solid #bfc3c4; }
+#wrap.study div.summuryArea:hover > h1, #wrap.study .openClass div.summuryArea > h1 { color:#333; }
+#wrap.study div.summuryArea:hover > h2, #wrap.study .openClass div.summuryArea > h2 { color:#666; }
+#wrap.study div.summuryArea:hover > h3, #wrap.study .openClass div.summuryArea > h3 { color:#999; }
+#wrap.study div.summuryArea:hover div, #wrap.study .openClass div.summuryArea div { display:none; }
+
+/* 과정상세보기 */
+#contentsArea.lectureDetail { font-size:14px; line-height:22px; }
+#contentsArea.lectureDetail div.summuryArea { overflow:hidden; padding:30px 0; background:url(../images/global/bg_block.png) no-repeat bottom; }
+#contentsArea.lectureDetail div.summuryArea > img { float:left; width:340px; height:256px; margin:0 20px 0 10px; border:1px solid #bfc3c4; }
+#contentsArea.lectureDetail h1, #contentsArea.lectureDetail h2, #contentsArea.lectureDetail h3, #contentsArea.lectureDetail h4, #contentsArea.lectureDetail h5 { margin:0; padding:0; }
+#contentsArea.lectureDetail div.summuryArea h1 { margin:0 0 10px; font-size:20px; line-height:30px; }
+#contentsArea.lectureDetail div.summuryArea h2 { margin:0 0 8px; font-size:15px; font-weight:normal; }
+#contentsArea.lectureDetail div.summuryArea h3 { margin:0 0 15px; font-size:12px; }
+#contentsArea.lectureDetail div.summuryArea h5 { margin:45px 0 20px; font-size:12px; }
+#contentsArea.lectureDetail div.summuryArea h5 img { margin:0 8px; }
+#contentsArea.lectureDetail div.summuryArea button { width:180px; height:48px; margin:15px 0; border:none; font-size:15px; font-weight:bold; }
+#contentsArea.lectureDetail div.summuryArea button.listButton { background:#666 !important; color:#fff !important; margin-left:2px; }
+#contentsArea.lectureDetail > h1 { overflow:hidden; border-left:3px solid #0780c2; padding:0 0 0 7px; margin:20px 0 10px 0; font-size:15px; }
+#contentsArea.lectureDetail > h1 button { float:right; margin-top:3px; border:none; background-color:transparent; font-weight:800; }
+#contentsArea.lectureDetail table { width:100%; margin:0 0 20px 0; border-collapse:collapse; border:1px solid #ccc; }
+#contentsArea.lectureDetail table th, #contentsArea.lectureDetail table td { padding:10px 0; text-align:center; border:1px solid #ccc; }
+#contentsArea.lectureDetail div.bookInfo { overflow:hidden; padding:10px; margin-bottom:20px; border:1px solid #ccc; }
+#contentsArea.lectureDetail div.bookInfo img { width:100px; margin-right:10px; border:1px solid #ccc; vertical-align:middle; }
+#contentsArea.lectureDetail div.bookInfo h1 { display:inline-block; font-size:15px; }
+#contentsArea.lectureDetail div.infoArea { padding:5px 10px 15px; line-height:22px; }
+#contentsArea.lectureDetail ol { padding-left:25px; line-height:28px; }
+#contentsArea.lectureDetail ol + h1 { margin-top:40px; }
+#contentsArea.lectureDetail div.btnArea { border-top:1px solid #ccc; margin:20px 0; padding:20px 0; }
+#contentsArea.lectureDetail div.reviewArea ul, #contentsArea.lectureDetail div.reviewArea li { overflow:hidden; margin:0; padding:0; list-style:none; }
+#contentsArea.lectureDetail div.reviewArea ul { border-top:1px solid #ccc; }
+#contentsArea.lectureDetail div.reviewArea li { padding:10px 0; border-bottom:1px solid #ccc; }
+#contentsArea.lectureDetail div.reviewArea h3 { overflow:hidden; float:left; width:120px; height:80px; margin-right:15px; text-align:center; line-height:110px; font-weight:normal; color:#787878; }
+#contentsArea.lectureDetail div.reviewArea h3 strong { font-size:20px; font-weight:800; color:#343434; }
+#contentsArea.lectureDetail div.reviewArea h3.scroe1 { background:url(../images/lecture/bg_score1.png) no-repeat 10px 10px; }
+#contentsArea.lectureDetail div.reviewArea h3.scroe2 { background:url(../images/lecture/bg_score2.png) no-repeat 10px 10px; }
+#contentsArea.lectureDetail div.reviewArea h3.scroe3 { background:url(../images/lecture/bg_score3.png) no-repeat 10px 10px; }
+#contentsArea.lectureDetail div.reviewArea h3.scroe4 { background:url(../images/lecture/bg_score4.png) no-repeat 10px 10px; }
+#contentsArea.lectureDetail div.reviewArea h3.scroe5 { background:url(../images/lecture/bg_score5.png) no-repeat 10px 10px; }
+#contentsArea.lectureDetail div.reviewArea h1, #contentsArea.lectureDetail div.reviewArea h2, #contentsArea.lectureDetail div.reviewArea p { margin:0 0 0 135px; padding:0; border-left:1px solid #ccc; }
+#contentsArea.lectureDetail div.reviewArea h1, #contentsArea.lectureDetail div.reviewArea h2 { padding-left:10px; }
+#contentsArea.lectureDetail div.reviewArea h1 { line-height:24px; font-size:15px; }
+#contentsArea.lectureDetail div.reviewArea h2 { line-height:18px; font-size:12px; color:#999; }
+#contentsArea.lectureDetail div.reviewArea p { padding:10px; font-size:14px; line-height:20px; }
+#contentsArea.lectureDetail div.reviewArea + div { border-top:none; }
+
+/* 디자인페이지 */
+div.designImage { padding:20px; }
+div.textArea { padding:30px; line-height:18px; }
+
+#contentsArea { padding:0 20px 20px; }
+/* 검색영역 */
+div.searchArea { overflow:hidden; padding:8px 20px 12px; text-align:right; background:url(../images/global/bg_block.png) no-repeat center bottom; }
+div.searchArea form { float:right; padding-left:35px; background:url(../images/global/icon_search.png) no-repeat left center; }
+div.searchArea input, #contents div.searchArea select, #contents div.searchArea button { height:30px; border:1px solid #ccc; }
+div.searchArea select { border:none !important; border-bottom:2px solid #999 !important; padding-left:5px; }
+div.searchArea input { border:none; border-bottom:2px solid #999; }
+div.searchArea input[type="text"]{ width:180px; }
+div.searchArea button { border:2px solid #999 !important; background:none; color:#565656; vertical-align:middle; line-height:23px; font-weight:bold; }
+div.searchArea > button { float:right; margin:2px 0 0 5px; }
+div.searchArea br + form { margin-top:5px; }
+div.searchArea select + select, div.searchArea input + select { margin-left:10px; }
+div.searchArea div.searchChangeArea { width:100%; padding-bottom:5px; margin-bottom:5px; }
+div.inputArea { padding:10px; background:#ddd; border-top:1px solid #999; }
+div.inputArea table { border-collapse:collapse; width:100%; border:1px solid #ccc; }
+div.inputArea table th, div.inputArea table td { padding:5px 0; border:1px solid #ccc; line-height:18px; text-align:center; }
+div.inputArea table th { background:#efefef; }
+div.inputArea table td { background:#fff; }
+div.inputArea table input[type="text"], div.inputArea table input[type="tel"], div.inputArea table select { height:28px; padding-left:5px; }
+div.inputArea table input[type="text"], div.inputArea table input[type="tel"] {  width:90%; padding-right:5px; }
+div.inputArea table td > button { width:80%; height:48px; border:1px solid #ccc; background:#efefef; color:#121212; font-weight:bold; }
+div.inputArea + div.searchArea { margin-top:5px; }
+div.inputArea + div.BBSList, div.searchArea + div.BBSList { margin-top:10px; }
+
+/* 게시판 쓰기페이지 */
+.BBSList { margin:10px 0; }
+.BBSList table { width:100%; border-collapse:collapse; border-bottom:1px solid #565656 !important; }
+.BBSList table th, .BBSList table td { text-align:center; padding:15px 0; line-height:20px; }
+.BBSList table th button { width:16px; height:12px; margin:0; padding:0; border:none; background:none; }
+.BBSList table th { border-top:1px solid #565656; background:#fff; }
+.BBSList table td { border-top:1px dashed #999; background:#fff; }
+.BBSList table th.left, .BBSList table td.left { text-align:left; padding-left:10px; }
+.BBSList table td.right { text-align:right; padding-right:15px; line-height:28px; }
+.BBSList table td.right span { color:#999; }
+.BBSList table td.right strong { color:#e91818 }
+.BBSList table td img { vertical-align:middle; }
+.BBSList table td span { color:#999; }
+.BBSList table tr.hover { background:#efefef; }
+.BBSList table td button { background:#fff; line-height:28px; padding:0 8px; border:1px solid #999; color:#565656; background:#efefef; }
+.BBSList table td button img { margin-right:5px; }
+.BBSList table td input[type="text"], .BBSList table td input[type="tel"] { height:28px; padding:0 5px; border:1px solid #999; width:90%; }
+.BBSList table td select { height:28px; padding:0 0 0 5px; border:1px solid #999; }
+.BBSList table td br + button { margin-top:8px; }
+.BBSList table tr.red td { background-color:#fbe3e3; }
+.BBSList table tr.green td { background-color:#edf7e9; }
+.BBSList table tr.notice td { background-color:#f8f8f8; }
+/* FAQ보기용 */
+.BBSList table tr.openView td { text-align:left; padding:5px 15px 20px; border-left:1px dashed #ccc; border-right:1px dashed #ccc; background:#efefef; }
+.BBSList table tr.openView td div { border:1px solid #ccc; background:#fff; padding:15px; }
+/* 과정리스트 */
+.BBSList ul.lectureList, .BBSList ul.lectureList li{ margin:0; padding:0; list-style:none; }
+.BBSList ul.lectureList { }
+.BBSList ul.lectureList li { overflow:hidden; border:1px solid #ccc; }
+.BBSList ul.lectureList li.noList { text-align:center; line-height:80px; font-size:15px; }
+.BBSList ul.lectureList li + li { margin-top:8px; }
+.BBSList ul.lectureList li > img { float:left; width:150px; height:112px; margin:10px; cursor:pointer; }
+.BBSList ul.lectureList li button { float:right; width:112px; height:132px; border-radius:0; border:none; border-left:1px solid #ccc; background:#efefef; font-weight:bold; color:#565656; text-align:center; }
+.BBSList ul.lectureList li button img { margin-bottom:15px; }
+.BBSList ul.lectureList li button:hover { background:#fff; }
+.BBSList ul.lectureList li h1, .BBSList ul.lectureList li h2, .BBSList ul.lectureList li h3, .BBSList ul.lectureList li h4, .BBSList ul.lectureList li h5 { margin:0; padding:0; }
+.BBSList ul.lectureList li h1 { overflow:hidden; width:510px; font-size:15px; margin:0 0 15px; text-overflow:ellipsis; white-space:nowrap; cursor:pointer; }
+.BBSList ul.lectureList li h2 { font-size:12px; color:#565656; font-weight:normal; }
+.BBSList ul.lectureList li h3 { font-size:12px; color:#999; margin:25px 0 8px; }
+.BBSList ul.lectureList li h2, .BBSList ul.lectureList li h5 { display:inline-block; }
+.BBSList ul.lectureList li h5 { padding:0 8px; margin-left:5px; border-radius:4px; line-height:18px; color:#fff; }
+
+/* 카테고리탭 */
+.BBSCategory, .BBSCategory li { display:block; margin:0; padding:0; }
+.BBSCategory { overflow:hidden; margin:10px 0 5px; padding:5px 10px 0; border:1px solid #ccc; border-bottom:none; background:url(../images/admin/bg_boardcategory.png) repeat-x bottom #efefef; }
+.BBSCategory li { float:left; padding:0 20px; line-height:36px; border:1px solid #efefef; border-bottom:none; cursor:pointer; }
+.BBSCategory li.select { border-bottom:none; background:#fff; font-weight:bold; }
+
+/* Paser */
+.BBSList div.pager { overflow:hidden; padding:15px 0; text-align:center; }
+.BBSList div.pager a, .BBSList div.pager b, .BBSList div.pager button { vertical-align:middle; }
+.BBSList div.pager button { height:24px; border:none; margin:0; background-color:transparent; }
+.BBSList div.pager button img { vertical-align:middle; }
+.BBSList div.pager a, .BBSList div.pager b { display:inline-block; height:24px; padding:0 7px; text-align:center; line-height:24px; font-size:15px; }
+.BBSList div.pager a { color:#787878; text-decoration:none; }
+.BBSList div.pager b { border:1px solid #dfdfdf; margin:3px 0 5px; color:#ec772d; }
+.BBSList div.pager a:hover { text-decoration:underline; }
+/* 버튼영역 */
+.btnArea { text-align:center; margin:10px 0; }
+.btnArea button { height:46px; margin:0 2px; padding:0 30px; border-radius:3px; background:#666; border:1px solid #ccc; line-height:24px; color:#fff; font-size:15px; font-weight:bold; vertical-align:middle; }
+.BBSView { margin-top:5px; }
+.BBSView div.titleArea { padding:5px 0; border-bottom:1px solid #ccc; }
+.BBSView div.titleArea h1, .BBSView div.titleArea h2, .BBSView div.titleArea h3, .BBSView div.titleArea div { margin:0; padding:0 35px;}
+.BBSView div.titleArea h1 { margin-bottom:8px; font-size:18px; line-height:24px; }
+.BBSView div.titleArea h1 span { font-size:15px; color:#565656; }
+.BBSView div.titleArea h2 { overflow:hidden; font-size:15px; line-height:38px; color:#565656; }
+.BBSView div.titleArea h2 span { margin-left:8px; padding-left:8px; border-left:2px solid #ccc; font-weight:normal; font-size:15px; color:#999; }
+.BBSView div.titleArea h2 strong.email, .BBSView div.titleArea h2 strong.tel, .BBSView div.titleArea h2 strong.date { float:right; display:inline-block; padding-left:28px; background-position:left center; background-repeat:no-repeat; line-height:36px; font-size:12px; }
+.BBSView div.titleArea h2 strong.email { background-image:url(../images/admin/icon_mail.png); }
+.BBSView div.titleArea h2 strong.tel { background-image:url(../images/admin/icon_tel.png); }
+.BBSView div.titleArea h2 strong.date { background-image:url(../images/admin/icon_date.png); }
+.BBSView div.titleArea h2 strong + strong { margin-right:30px; }
+.BBSView div.titleArea h3 { font-size:12px; line-height:24px; font-weight:normal; color:#999; }
+.BBSView div.titleArea div { overflow:hidden; color:#343434; }
+.BBSView div.titleArea div p { display:inline-block; padding:0 20px 0 0; margin:0; line-height:24px; }
+.BBSView div.titleArea h2, .BBSView div.titleArea h3, .BBSView div.titleArea div { border-top:1px dashed #ccc; }
+.BBSView div.fileArea { overflow:hidden; height:50px; padding:0 35px; line-height:40px; border-bottom:1px solid #ccc; background:#efefef; }
+.BBSView div.fileArea a { display:inline-block; height:32px; margin:8px 10px 8px 0; padding:0 15px 0 10px; border:1px dashed #999;  background:#fff;line-height:32px; text-decoration:none; color:#121212; }
+.BBSView div.fileArea img { width:24px; opacity:0.5; vertical-align:middle; margin-right:5px; }
+.BBSView div.fileArea a:hover { border:1px solid #565656 }
+.BBSView div.BBSContents { min-height:360px; padding:20px 35px; line-height:18px; }
+.BBSView div.btnArea { border-top:1px dashed #ccc; padding:20px 0; }
+
+/* 비밀번호 확인 모달 */
+#modal .chkPWD input[type="password"] { width:180px; height:32px; text-align:center; }
+
+/* 코멘트 */
+.BBSView .commentArea { overflow:hidden; background:#efefef; }
+.BBSView form.commentWrite { border:1px solid #ccc; margin:15px; padding:10px; background:#fff; }
+.BBSView form.commentWrite > div { margin-bottom:10px; }
+.BBSView form.commentWrite > div h1 { display:inline; font-size:12px; padding-right:8px; }
+.BBSView form.commentWrite > div input { height:32px; padding:0 5px; border:1px solid #999; color:#666; vertical-align:middle; margin-right:32px; }
+.BBSView form.commentWrite textarea, .BBSView form.commentWrite button { height:74px; vertical-align:middle; border:1px solid #999; }
+.BBSView form.commentWrite textarea { width:90%; border-right:none; padding:10px 5px; }
+.BBSView form.commentWrite button { width:10%; background:#565656; color:#fff; font-size:12px; font-weight:bold; }
+.BBSView ul.commentList { padding:0 15px 10px; }
+.BBSView ul.commentList li { padding:10px 15px; margin-top:5px; list-style:none; border:1px solie #999; background:#fff; }
+.BBSView ul.commentList li h1, .BBSView ul.commentList li h3 { line-height:18px; font-size:12px; }
+.BBSView ul.commentList li h1 { float:left; margin-bottom:8px; line-height:20px; font-weight:bold; color:#565656; }
+.BBSView ul.commentList li h1 span { margin-left:8px; padding-left:8px; border-left:2px solid #ccc; font-weight:normal; color:#999; }
+.BBSView ul.commentList li p { clear:both; padding:3px 0; line-height:18px; }
+.BBSView ul.commentList li h3 { color:#999; }
+.BBSView ul.commentList li form > button { float:right; margin:5px 0 0 5px; background:none; border:1px solid #999; vertical-align:middle; line-height:24px; color:#565656; }
+.BBSView ul.commentList li form > button:hover { background:#efefef; }
+.BBSView ul.commentList li.noReply { text-align:center; line-height:40px; }
+.BBSView ul.commentList div { clear:both; }
+.BBSView ul.commentList div > div { margin-bottom:10px; }
+.BBSView ul.commentList div > div h1 { display:inline; font-size:12px; padding-right:8px; }
+.BBSView ul.commentList div > div input { height:32px; padding:0 5px; border:1px solid #999; color:#666; vertical-align:middle; margin-right:32px; }
+.BBSView ul.commentList div textarea, .BBSView ul.commentList div button { height:74px; vertical-align:middle; border:1px solid #999; }
+.BBSView ul.commentList div textarea { width:90%; border-right:none; padding:10px 5px; }
+.BBSView ul.commentList div button { width:10%; background:#565656; color:#fff; font-size:12px; font-weight:bold; }
+
+div.replyArea { display:block; margin:10px 0; padding:8px 20px 20px; border:1px solid #ccc; background:#eaf2f8; }
+div.replyArea h2 { overflow:hidden; margin:0 0 5px 0; padding:5px 0; font-size:15px; color:#0780c2; }
+div.replyArea h2 span { font-size:12px; color:#666; }
+div.replyArea h2 button { float:right; background:#666; color:#efefef; font-weight:bold; }
+div.replyArea div { width:96%; min-height:180px; padding:2%; background:#fff; border:1px solid #ccc; line-height:18px; }
+
+.BBSWrite {}
+.BBSWrite ul { margin:20px 0; padding:0; border-top:1px solid #999; }
+.BBSWrite li { overflow:hidden; padding:5px 30px; border-bottom:1px dashed #ccc; line-height:22px; list-style:none; }
+.BBSWrite li > h1, .BBSWrite li div.halfDiv > h1 { display:inline-block; width:100px; margin:0 10px 0 0; padding:0 10px 0 0; font-size:12px; border-right:2px solid #ccc; vertical-align:middle; }
+.BBSWrite li > h2 { margin:0 10px 10px 0; font-size:12px; vertical-align:middle; }
+.BBSWrite li input { vertical-align:middle; }
+.BBSWrite li br + input[type="text"]{ margin:2px 0; }
+.BBSWrite li input[type="tel"], .BBSWrite li input[type="text"], .BBSWrite li input[type="password"], .BBSWrite li select, .BBSWrite li input[type="file"] { height:32px; padding:0 5px; border:1px solid #999; color:#666; vertical-align:middle; }
+.BBSWrite li select { padding-right:0; }
+.BBSWrite li textarea { width:85%; height:180px; border:1px solid #999; padding:8px; line-height:18px; vertical-align:middle; }
+.BBSWrite li div.normalText, .BBSWrite li div.address, .BBSWrite li div.halfDiv, .BBSWrite li div.textInputs { display:inline-block; overflow:hidden; vertical-align:middle; }
+.BBSWrite li div.textInputs { width:88%; }
+.BBSWrite li div.address { line-height:32px; }
+.BBSWrite li div.normalText { line-height:24px; }
+.BBSWrite li div.halfDiv { width:48%; line-height:22px; }
+.BBSWrite li button { display:inline-block; height:32px; padding:0 10px; border:1px solid #999;  background:#efefef; line-height:32px; text-decoration:none; color:#121212; vertical-align:middle; }
+.BBSWrite li button img { width:24px; vertical-align:middle; }
+.BBSWrite .subject { width:600px; }
+.BBSWrite .name { width:200px; }
+.BBSWrite .tel { width:60px; }
+.BBSWrite .mail { width:240px; }
+.BBSWrite .year { width:50px; }
+.BBSWrite .month { width:30px; }
+.BBSWrite div.btnArea { padding:20px 0; border-bottom:1px solid #565656; text-align:center; }
+.BBSWrite div.btnArea button { height:48px; margin:0 5px; border:1px solid #999; border-radius:5px; background:#666; padding:0 20px; font-weight:bold; }
+.BBSWrite div.btnArea button img { margin-right:6px; }
+.BBSWrite div.textPrint { padding:8px 0; line-height:18px; }
+.BBSWrite div.attachFile { display:inline-block; padding:3px; background:#565656; vertical-align:middle; text-align:center; }
+.BBSWrite div.attachFile a { display:inline-block; padding:0 15px; background:#fff; line-height:28px; text-decoration:none; vertical-align:middel; font-weight:bold; color:#121212; }
+.BBSWrite div.attachFile a img { margin-right:8px; }
+.BBSWrite div.attachFile button { border:none; height:28px; color:#efefef; background:none; vertical-align:middle; }
+.BBSWrite label.AttachFiles { display:inline-block; min-width:60px; height:28px; padding:0 15px 0 42px; border:1px solid #999; border-radius:2px; background:url(../images/admin/icon_addfile.png) no-repeat 10px center #efefef; line-height:28px; vertical-align:middle; }
+.BBSWrite div.examView { overflow-y:scroll; overflow-x:none; width:95%; height:80px; margin:5px 0; border:1px solid #999; padding:8px; line-height:18px; vertical-align:middle; word-break:break-strict; }
+.BBSWrite label.AttachFiles span { padding:0; margin:0; display:inline; }
+
+.BBSWrite li.replyArea { display:block; margin:10px 10px 0; padding:8px 20px 20px; border:1px solid #ccc; background:#eaf2f8; }
+.BBSWrite li.replyArea h2 { overflow:hidden; margin:0 0 5px 0; padding-bottom:5px; border-bottom:1px dashed #999; font-size:15px; color:#0780c2; }
+.BBSWrite li.replyArea h2 span { font-size:12px; color:#666; }
+.BBSWrite li.replyArea h2 button { float:right; background:#666; color:#efefef; font-weight:bold; }
+.BBSWrite li.replyArea div { width:96%; min-height:180px; padding:2%; background:#fff; border:1px solid #ccc; line-height:18px; }
+
+/* 통계 레이아웃 */
+
+/* study modal */
+#screenModal { overflow-x:hidden; overflow-y:auto; position:fixed; top:0; left:0; width:100%; height:100%; background:#f2f6f7; z-index:999; }
+#screenModal > div, #screenModal > form > div { width:1260px; margin:0 auto; border:1px solid #bfc3c4; background:#fff; }
+#screenModal > div + div, #screenModal > div + form, #screenModal > form div + div { margin-top:15px; }
+#screenModal div.titleArea { overflow:hidden; width:100%; border-top:5px solid #0780c2; border-bottom:2px solid #2665ae; background:#fff; }
+#screenModal div.titleArea > div { overflow:hidden; width:1260px; margin:20px auto; text-align:right; }
+#screenModal div.titleArea > div > img,  #screenModal div.titleArea > div > h1, #screenModal div.titleArea > div > h2 { float:left; }
+#screenModal div.titleArea > div > img { margin-right:20px; }
+#screenModal div.titleArea > div > h1, #screenModal div.titleArea > div > h2 { width:1020px; margin:0; padding:0; text-align:left; }
+#screenModal div.titleArea > div > h1 { margin:26px 0 8px; font-size:30px; color:#343434; }
+#screenModal div.titleArea > div > h2 { font-size:20px; color:#565656; }
+#screenModal div.titleArea > div button { overflow:hidden; width:70px; height:70px; margin:27px 0; padding:0; border:none; background:none; }
+#screenModal > div.caution { padding:45px 0; background:url(../images/study/bg_notice.png); text-align:center; }
+#screenModal > div.caution h1, #screenModal > div.caution strong, #screenModal > div.caution b { color:#ffdc61;}
+#screenModal > div.caution h1 { font-size:26px; }
+#screenModal > div.caution p { margin:0 auto; line-height:22px; font-size:15px; padding:20px 80px; color:#fff;  }
+/*#screenModal > div.caution p + p { padding-top:25px; background:url(../images/study/img_blockdiv.png) no-repeat center top; }*/
+#screenModal > div.caution p + p { padding-top:25px; }
+#screenModal > div.agreeArea { height:74px; line-height:74px; text-align:center; font-size:15px; }
+#screenModal > div.agreeArea input[type="checkbox"], #screenModal > div.agreeArea input[type="radio"] { display:none; }
+#screenModal > div.agreeArea input[type="checkbox"], #screenModal > div.agreeArea input[type="radio"] { display:inline-block\9; width:36px; height:36px; border:2px solid #666; padding:0; vertical-align:middle; } /* IE8 Hack */
+#screenModal > div.agreeArea label { overflow:hidden; display:inline-block; height:43px; margin:15.5px 0; padding-left:48px; background-image:url(../images/study/input_checkbox_big.png); background-repeat:no-repeat; background-position:left bottom; line-height:52px; cursor:pointer; }
+#screenModal > div.agreeArea label { background:none\9; padding-left:8px\9; vertical-align:middle\9;  } /* IE8 Hack */
+#screenModal > div.agreeArea input:checked + label { background-position:left top; }
+#screenModal > div.btnArea { overflow:hidden; border:none; background:none; padding:20px 0; margin-bottom:40px; text-align:center; }
+#screenModal > div.btnArea button { overflow:hidden; height:54px; margin:0 2px; padding:0; border:none; background:none; vertical-align:middle; }
+#screenModal > div.btnArea button img { margin-top:-54px; }
+#screenModal > div.btnArea button:hover img { margin-top:0; }
+/* 시험보기 페이지 */
+#screenModal > div.cautionTest { overflow:hidden; height:85px; padding:0; background:url(../images/study/bg_notice.png); color:#fff; }
+#screenModal > div.cautionTest strong, #screenModal > div.cautionTest b { color:#ffdc61;}
+#screenModal > div.cautionTest div.timer { float:left; width:270px; height:85px; margin-right:20px; background:url(../images/global/bg_glbalbtn.png); line-height:85px; color:#ffdc61; font-family:'Open Sans', sans-serif; text-align:center; font-size:15px; font-weight:bold; }
+#screenModal > div.cautionTest div.timer strong { margin-left:5px; font-size:50px; color:#fff; vertical-align:middle; font-weight:700;  }
+#screenModal > div.cautionTest div.textArea { overflow:hidden; height:85px; margin:0 20px 0 10px; padding:0; background:url(../images/study/img_notice.png) no-repeat right center; }
+#screenModal > div.cautionTest div.textArea h1, #screenModal > div.cautionTest div.textArea p { margin:0; padding:0; margin-right:72px;  }
+#screenModal > div.cautionTest div.textArea h1 { padding:15px 0 5px; font-size:15px; }
+#screenModal > div.cautionTest div.textArea p { line-height:18px; }
+
+#contentsPopup { margin:0 auto; margin-top:60px; border:1px solid #bfc3c4; background:#fff; }
+#contentsPopup div.caution { overflow:hidden; margin:15px 30px 0; padding:15px 10px; background:url(../images/study/bg_notice.png); color:#fff; }
+#contentsPopup div.caution h1 { font-size:15px; margin:0 0 8px; padding:0; }
+#contentsPopup div.caution strong, #contentsPopup div.caution b { color:#ffdc61;}
+#contentsPopup div.answerTrue { background:url(../images/study/bg_checktrue.png) no-repeat 10px 15px; }
+#contentsPopup div.answerFalse { background:url(../images/study/bg_checkfalse.png) no-repeat 10px 15px; }
+#contentsNav { overflow:hidden; position:fixed; top:0; left:0; width:100%; height:60px; border-bottom:2px solid #0780c2; background:#f2f6f7; }
+#contentsNav > h1 { overflow:hidden; float:left; font-size:15px; font-weight:normal; color:#121212; margin:0; padding:0 20px; line-height:60px; text-overflow:ellipsis; }
+#contentsNav > h2 { overflow:hidden; float:left; font-size:15px; font-weight:normal; color:#121212; margin:0; padding:10px 20px; line-height:20px; text-overflow:ellipsis; }
+#contentsNav > h2 span { font-size:12px; color:#898989; }
+#contentsNav form, #contentsNav table { float:right; }
+#contentsNav table { margin:5px;  border-collapse:collapse; border:1px solid #bfc3c4; }
+#contentsNav table th, #contentsNav table td { width:60px; height:20px; background:#fff; text-align:center; }
+#contentsNav table td { border-top:1px dashed #ccc; background:#fff; }
+#contentsNav form { height:60px; padding:0 10px; background:#0780c2; text-align:center; }
+#contentsNav form select { height:28px; }
+#contentsNav form h1 { margin:0; padding:0; line-height:28px; color:#fff; font-size:12px; }
+
+div.mobileCert { }
+div.mobileCert > form { display:none; }
+div.mobileCert ul, div.mobileCert li { overflow:hidden; margin:0; padding:0; list-style:none; }
+div.mobileCert li { line-height:45px; padding:10px 20px; }
+div.mobileCert li h1 { display:inline-block; margin:0 20px 0 0; padding:0 20px 0 0; border-right:2px solid #ccc; font-size:15px; }
+div.mobileCert li form { display:inline-block; }
+div.mobileCert li button { height:45px; padding:0 60px; border:none; font-size:15px; color:#fff; background:#787878; font-weight:bold; }
+div.mobileCert li strong { font-size:15px; }
+div.mobileCert li button { padding:0 25px 0 60px; height:48px; border:none; background-position:20px center; background-repeat:no-repeat; background-color:#666; color:#fff; font-size:15px; font-weight:bold; }
+div.mobileCert li button.btnPhone { background-image:url(../images/member/icon_phone.png); }
+div.mobileCert li button.btnIpin { background-image:url(../images/member/icon_ipin.png); }
+
+
+div.testArea { overflow:hidden; }
+div.testArea > ul, div.testArea > ul li { list-style:none; margin:0; padding:0; }
+div.testArea > ul { float:left; overflow:hidden; width:270px; }
+div.testArea > ul li { text-align:center; background:#f6f6f6; line-height:30px; border-bottom:1px solid #bfc3c4; }
+div.testArea > ul li div { overflow:hidden; float:right; text-align:center; width:140px; padding:0 15px; border-left:1px solid #bfc3c4; background:#fff; white-space:nowrap; text-overflow:ellipsis; }
+div.testArea > ul + div {  border-left:1px dashed #bfc3c4; }
+div.testArea > div { width:929px; overflow:hidden; padding:0 30px 30px; }
+div.testArea > div h1, div.testArea > div h2, div.testArea > div h3 { margin:0; padding:0; }
+div.testArea > div h1 { margin:40px 0 20px; font-size:20px; color:#565665; }
+div.testArea > div h2 { margin-bottom:10px; font-size:15px; color:#565665; line-height:22px }
+div.testArea > div h3 { border:1px dashed #999; margin-bottom:10px; padding:0 8px; font-size:12px; color:#565656; line-height:30px; font-weight:normal; }
+div.testArea > div h3 strong { color:#343434; padding-right:20px; }
+div.testArea > div ol, div.testArea > div li { margin:0; padding:0; list-style:none; }
+div.testArea > div li { overflow:hidden; padding:5px 0;  }
+div.testArea > div li input[type="radio"] { display:none; }
+div.testArea > div li input[type="radio"] { float:left\9; display:inline-block\9; width:20px; height:20px; padding:0; vertical-align:middle; } /* IE8 Hack */
+div.testArea > div li label { float:left; display:inline-block; overflow:hidden; background:url(../images/study/input_radio_off.png) no-repeat left top; line-height:17px; padding-left:23px; cursor:pointer; vertical-align:top; }
+div.testArea > div li label { background:none\9; padding-left:8px\9; vertical-align:middle\9;  } /* IE8 Hack */
+div.testArea > div li input[type="radio"]:checked + label { background:url(../images/study/input_radio_on.png) no-repeat left top; }
+div.testArea > div input[type="text"], div.testArea > div textarea { width:100%; border:1px solid #bfc3c4; color:#999; }
+div.testArea > div input[type="text"] { height:36px; padding:0 10px; }
+div.testArea > div textarea { height:200px; padding:10px; }
+div.testArea > div input[type="text"]:focus, div.testArea > div textarea:focus { color:#343434; border:1px solid #666; }
+
+div.reportArea { overflow:hidden; padding:20px 0; }
+div.reportArea > h1, div.reportArea > h2 { margin:0; padding:0 30px; }
+div.reportArea > h1 { margin:10px 0 20px; font-size:20px; color:#565665; }
+div.reportArea > h2 { margin-bottom:10px; font-size:15px; color:#565665; line-height:22px }
+div.reportArea > h3 { border:1px dashed #999; margin:0 30px 10px; padding:0 8px; font-size:12px; color:#565656; line-height:30px; font-weight:normal; }
+div.reportArea > h3 strong { color:#343434; padding-right:20px; }
+div.reportArea > a { display:block; margin:0 30px; padding:0 10px 0 60px; border:1px solid #bfc3c4; background:url(../images/study/bg_a_tag.png) no-repeat 20px center; line-height:50px; color:#0780c2; font-size:15px; text-decoration:none; }
+
+div.surveyArea { overflow:hidden; overflow:hidden; padding:0 0 30px; }
+div.surveyArea > form { padding:0 30px; }
+div.surveyArea h1, div.surveyArea > div h2, div.surveyArea > div h3 { margin:0; padding:0; }
+div.surveyArea h1 { margin:40px 0 20px; font-size:20px; color:#565665; }
+div.surveyArea h2 { margin-bottom:10px; font-size:15px; color:#565665; line-height:22px }
+div.surveyArea h3 { border:1px dashed #999; margin-bottom:10px; padding:0 8px; font-size:12px; color:#565656; line-height:30px; font-weight:normal; }
+div.surveyArea h3 strong { color:#343434; padding-right:20px; }
+div.surveyArea ol, div.surveyArea li { margin:0; padding:0; list-style:none; }
+div.surveyArea li { overflow:hidden; padding:5px 0;  }
+div.surveyArea li input[type="radio"] { display:none; }
+div.surveyArea li input[type="radio"] { float:left\9; display:inline-block\9; width:20px; height:20px; padding:0; vertical-align:middle; } /* IE8 Hack */
+div.surveyArea li label { float:left; display:inline-block; overflow:hidden; background:url(../images/study/input_radio_off.png) no-repeat left top; line-height:17px; padding-left:23px; cursor:pointer; vertical-align:top; }
+div.surveyArea li label { background:none\9; padding-left:8px\9; vertical-align:middle\9;  } /* IE8 Hack */
+div.surveyArea li input[type="radio"]:checked + label { background:url(../images/study/input_radio_on.png) no-repeat left top; }
+div.surveyArea textarea { width:100%; border:1px solid #bfc3c4; color:#999; }
+div.surveyArea textarea { height:52px; padding:10px; }
+div.surveyArea textarea:focus { color:#343434; border:1px solid #666; }
+
+div.testArea div.commentaryArea, div.reportArea div.commentaryArea { margin-top:15px; padding:15px; border:1px solid #bfc3c4; background:#f2f6f7; }
+div.testArea div.commentaryArea > h1, div.reportArea div.commentaryArea > h1 { margin:0 0 10px; padding:0 0 10px; border-bottom:1px dashed #bfc3c4; font-size:15px; color:#0780c2; }
+div.reportArea div.exampleArea { margin-top:15px; padding:15px; border:1px solid #ccc; background:#f2f2f2; }
+div.reportArea div.exampleArea > h1 { margin:0 0 10px; padding:0 0 10px; border-bottom:1px dashed #ccc; font-size:15px; color:#343434; }
+div.reportArea div.commentaryArea, div.reportArea div.exampleArea { margin:15px 30px; }
+div.reportArea div.commentaryArea > div, div.reportArea div.exampleArea > div { font-size:13px; line-height:21px; }
+div.reportArea div.commentaryArea a, div.reportArea div.exampleArea a { display:block; margin:0; padding:0 10px 0 60px; border:1px solid #bfc3c4; background:url(../images/study/bg_a_tag.png) no-repeat 20px center #fff; line-height:50px; color:#0780c2; font-size:15px; text-decoration:none; }
+
+div.reportSubmit { margin:0 20px 20px; border:1px solid #999; }
+div.reportSubmit > ul, div.reportSubmit > ul li { list-style:none; margin:0; padding:0; }
+div.reportSubmit > ul li { float:left; height:74px; font-size:20px; color:#565665; width:50%; text-align:center; background:#e5ebec; line-height:74px; cursor:pointer; }
+div.reportSubmit > ul li.select { background:#fff; }
+div.reportSubmit > div { overflow:hidden; padding:20px; }
+div.reportSubmit > div ul, div.reportSubmit > div ul li { margin:0; padding:0; list-style:none; }
+div.reportSubmit > div ul { margin-bottom:20px; }
+div.reportSubmit > div ul li { overflow:hidden; margin:0; padding:15px; line-height:22px; font-size:15px; }
+div.reportSubmit > div ul li a { display:inline-block; height:30px; line-height:30px; margin:5px 0; padding:5px 0 0 40px; background:url(../images/study/bg_a_tag.png) no-repeat 0 center; line-height:22px; color:#0780c2; }
+div.reportSubmit > div ul li h1 { float:left; width:120px; margin:10px 20px 10px 0; padding:0 20px 0 10px; border-right:2px solid #565656; font-size:15px; }
+div.reportSubmit > div ul li label { display:inline-block; height:50px; padding:0 25px 0 60px; border:1px solid #a0acae; background:url(../images/study/btn_file.png) no-repeat 20px center; font:bold; line-height:50px; text-align:center; cursor:pointer; }
+div.reportSubmit > div ul li input[type="file"] { display:none; }
+div.reportSubmit > div ul li + li { border-top:1px dashed #bfc3c4; }
+div.reportSubmit > div textarea { width:100%; height:240px !important; margin-bottom:10px; border:1px solid #bfc3c4; color:#999; height:52px; padding:10px; }
+div.reportSubmit > div textarea:focus { color:#343434; border:1px solid #666; }
+div.reportSubmit > div div { overflow:hidden; padding:0 20px; background:url(../images/study/bg_notice.png); color:#fff; line-height:36px; }
+div.reportSubmit > div div strong { color:#ffdc61;}
+
+/* 회원가입 */
+#contentsArea.agreementPage { overflow:hidden; }
+#contentsArea.agreementPage div, #contentsArea.agreementPage h1 { overflow:hidden; margin:0; padding:0; }
+#contentsArea.agreementPage > div { padding:20px 0 30px; background:url(../images/global/bg_block.png) no-repeat bottom;  }
+#contentsArea.agreementPage h1 { float:left; width:200px; padding:10px 0; font-size:20px; line-height:30px; }
+#contentsArea.agreementPage input { display:none; }
+#contentsArea.agreementPage h1 label { margin-top:8px; display:block; padding-left:21px; background-image:url(../images/global/input_checkbox.png); background-repeat:no-repeat; background-position:left bottom; font-size:12px; line-height:17px; cursor:pointer; }
+#contentsArea.agreementPage h1 input:checked + label { background-position:left top; }
+#contentsArea.agreementPage > div > div { overflow-y:scroll; border:1px solid #bfc3c4; width:700px; height:360px; padding:10px; line-height:18px; }
+#contentsArea.agreementPage > div button { padding:0 25px 0 60px; height:48px; border:none; background-position:20px center; background-repeat:no-repeat; background-color:#666; color:#fff; font-size:15px; font-weight:bold; }
+#contentsArea.agreementPage > div.btnArea { background:none; text-align:center; }
+#contentsArea.agreementPage > div.btnArea button { width:400px; height:68px; border:none; background:#0780c2; color:#fff; font-size:18px; font-weight:bold; }
+#contentsArea.agreementPage > div strong { line-height:50px; font-size:15px; }
+#contentsArea.agreementPage > div form { display:inline-block; }
+#contentsArea.agreementPage button.btnPhone { background-image:url(../images/member/icon_phone.png); }
+#contentsArea.agreementPage button.btnIpin { background-image:url(../images/member/icon_ipin.png); }
+
+#contentsArea.agreementPage .memberCheck form {padding:10px 0;}
+#contentsArea.agreementPage .memberCheck form div {margin-bottom:10px;}
+#contentsArea.agreementPage .memberCheck form .floatLeft {float:left;}
+#contentsArea.agreementPage .memberCheck form .floatLeft:after {display: block;  clear: both;  content:""}
+#contentsArea.agreementPage .memberCheck form .floatLeft button {width:135px; height:28px; margin:115px 0 0 20px; padding:0; font-size:14px;}
+#contentsArea.agreementPage .memberCheck div h2 {float:left; width:60px; margin:5px 10px 0 0; font-size:15px;}
+#contentsArea.agreementPage .memberCheck div input{display:inline-block; width:150px; height:28px; padding:0 5px; border:1px solid #bfc3c4;}
+#contentsArea.agreementPage .memberCheck div .tel	{width:95px;}
+#contentsArea.agreementPage .memberCheck div select{float:left; width:50px; height:28px; border:1px solid #bfc3c4;}
+#contentsArea.agreementPage .memberCheck div select:after {display: block;  clear: both;  content:""}
+#contentsArea.agreementPage .memberCheck div ul {padding:0; list-style:none;}
+#contentsArea.agreementPage .memberCheck div span {line-height:27px; font-size:13px;}
+#contentsArea.agreementPage .memberCheck div strong {line-height:27px; font-size:13px;}
+
+/* 수강신청 */
+.submitLectureArea { overflow:hidden; margin:20px; padding:10px; border:1px solid #bfc3c4; }
+.submitLectureArea h1, .submitLectureArea h1, .submitLectureArea h3 { margin:0; padding:0; }
+.submitLectureArea > h1 { padding:0 10px; border-bottom:1px dashed #ccc; font-size:15px; line-height:30px;  }
+.submitLectureArea > h2 { margin-bottom:8px; padding:0 10px; font-size:13px; color:#999; font-weight:normal; line-height:20px; }
+.submitLectureArea > h2 strong { color:#343434; }
+.submitLectureArea h3 { margin:10px 10px 15px; text-align:right; font-size:15px; }
+.submitLectureArea table { border-collapse:collapse; width:100%; border-top:1px solid #0780c2; }
+.submitLectureArea table th, .submitLectureArea table td { height:34px; text-align:center; }
+.submitLectureArea table th { border-bottom:1px dashed #ccc; background:#eaf2f8; }
+.submitLectureArea table td { border-bottom:1px solid #999; text-align:center; }
+
+/* 로그인페이지 */
+#loginArea { overflow:hidden; width:538px; height:538px; border:1px solid #bfc3c4; margin:90px auto 10px; padding:50px 231px 50px; text-align:center; }
+#loginArea > form { padding:30px 0; }
+#loginArea > form h1 { padding:0; margin:0 0 20px 0; font-size:15px; line-height:22px; }
+#loginArea > form input { height:52px; padding:0 10px; border:1px solid #bac3c5; color:#787878; font-size:15px; font-weight:bold; }
+#loginArea > form > input { width:400px; }
+#loginArea > form > button { width:400px; height:68px; border:none; color:#fff; font-size:18px; font-weight:bold; }
+#loginArea > form > button img { margin-right:10px; }
+#loginArea > form > input+input { margin-top:10px; }
+#loginArea > form > input+button { margin-top:30px; }
+#loginArea > form > div+button { margin-top:15px; }
+#loginArea > form > div { overflow:hidden; text-align:left; }
+#loginArea > form > div h1 { float:left; width:86px; margin:0 15px 0 0; padding:0; border-right:2px solid #ccc; line-height:52px; font-size:15px; }
+#loginArea > form > div + div { margin-top:15px; }
+#loginArea > form > div strong { line-height:24px; color:#ef1313; }
+#loginArea > form > div input { width:352px; }
+#loginArea > form > div input[type="tel"] { width:52px; }
+#loginArea > form > div input.email { width:168px; }
+#loginArea > a { padding:0 8px; color:#999; font-size:15px; text-decoration:none; }
+#loginArea > a:hover { color:#666; }
+/* 공사중, 홈페이지 준비중 */
+#contentsArea.alreadyPage { min-height:840px; background:url(../images/global/alreadypage.png) no-repeat center #fff; }
+
+/* 학습하기 모달 */
+#studyPopup  { overflow:hidden; margin:0; padding:0; zoom:1; }
+div#popupStudyArea, #studyPopup iframe { float:left; margin:0; padding:0; }
+#popupStudyArea h1, #popupStudyArea h2, #popupStudyArea h5 { margin:0; padding:0; }
+#popupStudyArea { overflow-y:scroll; overflow-x:hidden; width:338px; padding:0; margin:0; }
+#popupStudyArea > h1 { padding:0 20px; margin:20px 0 8px; font-size:15px; color:#2665ae; }
+#popupStudyArea > h2 { padding:0 20px; margin-bottom:20px; font-size:12px; color:#121212; font-weight:normal; }
+#popupStudyArea > h5 { padding:0 20px; background:#0780c2; line-height:30px; color:#edf9ff; text-align:center; font-size:12px; }
+#popupStudyArea > h5 strong { color:#fff; font-size:15px; }
+#popupStudyArea ul, #popupStudyArea li { overflow:hidden; list-style:none; margin:0; padding:0; }
+#popupStudyArea > ul { margin:0 10px; border:1px solid #ccc; border-bottom:none; background:#ccc; }
+#popupStudyArea > ul > li { float:left; width:49.9%; line-height:40px; font-weight:bold; text-align:center; cursor:pointer; }
+#popupStudyArea > ul > li.select { background:#fff; color:#0780c2; }
+#popupStudyArea > div, #popupStudyArea > form { margin:0 10px 20px; border:1px solid #ccc; border-top:none; background:#fff; }
+#popupStudyArea > div h1 { margin:10px 0 5px; font-size:12px; color:#0780c2; }
+#popupStudyArea > div ul { padding:10px; }
+#popupStudyArea > div li { padding:10px; line-height:18px; }
+#popupStudyArea > div li + li { border-top:1px dashed #ccc; }
+#popupStudyArea > form { display:block; width:279px; padding:10px; }
+#popupStudyArea > form textarea { width:281px; height:300px; border:1px solid #ccc; margin:0; padding:10px; }
+*:first-child+html #popupStudyArea > form textarea { width:260px; margin-left:-10px; }
+#popupStudyArea > form h1 { margin:10px 0 5px; font-size:12px; color:#0780c2; }
+#popupStudyArea > form h2 { margin:10px 0; font-size:12px; line-height:18px; font-weight:normal; }
+#popupStudyArea > form > button { width:281px; height:42px; margin:10px 0; border:1px solid #999; color:#565656; background:#fff; font-size:12px; font-weight:bold; }
+#popupStudyArea > form > button:hover { background:#efefef; }
+#popupStudyArea > button { width:303px; height:42px; margin:0 10px 10px; border:none; background:#0780c2; color:#fff; font-size:15px; font-weight:bold; }
+
+/* 일반모달 */
+/* 모달 설정 */
+#modal { position:fixed; top:0; left:0; width:100%; height:100%; background:url(../images/admin/bg_modal.png); z-index:999; }
+#modal > div { position:absolute; top:50%; left:50%; background:#fff; border:1px solid #121212; }
+#modal > div > h1 { overflow:hidden; margin:0; padding:10px 15px; line-height:32px; font-size:16px; background:#4a5359; color:#efefef; }
+#modal > div > h1 button { position:absolute; left:100%; width:32px; height:32px; margin:0 0 0 -45px; padding:0; background:#d0d6da; border:3px solid #292f33; border-radius:16px; }
+#modal > div > div, #modal > div > form > div { padding:15px; }
+#modal > div > div > h1, #modal > div > form > div > h1 { border-bottom:1px dashed #565656; padding:0 0 0 8px; margin:3px 0; border-left:5px solid #4a5359; line-height:24px; font-size:15px; }
+#modal > div > div > h1 span, #modal > div > form > div > h1 span { font-size:12px; font-weight:normal; color:#787878; }
+#modal > div > div > ul + h1, #modal > div > div > table + h1, #modal > div > div > div + h1,
+#modal > div > form > div > ul + h1, #modal > div > form > div > table + h1, #modal > div > form > div > div + h1 { margin-top:12px;  }
+#modal div.scrollDiv { overflow-y:scroll; background:#fefefe; }
+#modal table + table { margin-top:18px; }
+
+
+/* 모달별 설정 */
+#modal .lectureSubmit { width:640px; height:530px; }
+
+/* 캡차 */
+#captcha { overflow:hidden; width:380px; height:435px; border-top:5px solid #0780c2; }
+#captcha > form { display:none; }
+#captcha div.header { overflow:hidden; height:42px; border-bottom:1px solid #0780c2; background:#fff; padding:0 15px; line-height:42px; }
+#captcha div.header > h1 { display:inline-block; margin:0; padding:0; font-size:18px; color:#0780c2; }
+#captcha div.header > input { float:right; height:22px; margin:10px 0; border:2px solid #0780c2; color:#0780c2; background:none; }
+#captcha div.info_area { text-align:center; padding:0 15px; }
+#captcha div.info_area h1, #captcha div.info_area h2 { padding:0; margin:0; }
+#captcha div.info_area h1 { margin:15px 0 5px; font-size:15px; color:#343434; }
+#captcha div.info_area h2 { margin:0 0 8px; padding-bottom:15px; font-size:12px; color:#898989; border-bottom:1px dashed #ccc; }
+#captcha div.info_area ul, #captcha div.info_area li { margin:0; padding:0; list-style:none; }
+#captcha div.info_area li { line-height:24px; }
+#captcha div.capcha_div { margin:20px; padding:20px; background:#fff; border:1px solid #ccc; text-align:center; }
+#captcha div.capcha_div div { overflow:hidden; height:62px; }
+#captcha div.capcha_div div + div { height:34px; margin-top:20px; padding-bottom:10px; border-bottom:1px dashed #ccc; }
+#captcha div.capcha_div div > img { display:block; margin:0 auto; }
+#captcha div.capcha_div div > input { width:40%; height:24px;  background:#efefef; border:1px solid #999; color:#565656; }
+#captcha div.capcha_div h2 { color:#0780c2; font-size:12px; }
+#captcha div.capcha_div > input[type="text"] { width:82%; border:1px solid #999; height:28px; text-align:center;  }
+#captcha div.capcha_div > input[type="button"] { width:82%; height:36px; margin-top:5px; border:none; background:#0780c2; color:#fff;  }
+
+/* 최초 본인인증페이지 */
+#agreementCheck { }
+#agreementCheck > div, #agreementCheck > form { width:1260px; margin:0 auto; border:1px solid #bfc3c4; background:#fff; }
+#agreementCheck > div + div, #agreementCheck > div + form, #agreementCheck > form div + div { margin-top:15px; }
+#agreementCheck div.titleArea { overflow:hidden; width:100%; border-top:5px solid #0780c2; border-bottom:2px solid #2665ae; background:#fff; }
+#agreementCheck div.titleArea > div { overflow:hidden; width:1260px; margin:20px auto; text-align:right; }
+#agreementCheck div.titleArea > div > img,  #agreementCheck  div.titleArea > div > h1, #agreementCheck  div.titleArea > div > h2 { float:left; }
+#agreementCheck div.titleArea > div > img { margin-right:20px; }
+#agreementCheck div.titleArea > div > h1, #screenModal div.titleArea > div > h2 { width:1020px; margin:0; padding:0; text-align:left; }
+#agreementCheck div.titleArea > div > h1 { margin:26px 0 8px; font-size:30px; color:#343434; }
+#agreementCheck div.titleArea > div > h2 { font-size:20px; color:#565656; }
+#agreementCheck div.agreeUse > h1, #agreementCheck div.private > h1, #agreementCheck div.ACS > h1 { margin:0; padding:0 20px; font-size:18px; background:#0780c2; color:#fff; line-height:54px; }
+#agreementCheck div.agreeUse > div, #agreementCheck div.private > div, #agreementCheck div.ACS > div { overflow-x:hidden; overflow-y:scroll; padding:20px; height:200px; line-height:22px; font-size:13px; }
+#agreementCheck > div.agreeArea { height:74px; line-height:74px; margin:5px auto 20px; text-align:center; font-size:15px; }
+#agreementCheck > div.agreeArea input[type="checkbox"], #agreementCheck > div.agreeArea input[type="radio"] { display:none; }
+#agreementCheck > div.agreeArea input[type="checkbox"], #agreementCheck > div.agreeArea input[type="radio"] { display:inline-block\9; width:36px; height:36px; border:2px solid #666; padding:0; vertical-align:middle; } /* IE8 Hack */
+#agreementCheck > div.agreeArea label { overflow:hidden; display:inline-block; height:43px; margin:15.5px 0; padding-left:48px; background-image:url(../images/study/input_checkbox_big.png); background-repeat:no-repeat; background-position:left bottom; line-height:52px; cursor:pointer; }
+#agreementCheck > div.agreeArea label { background:none\9; padding-left:8px\9; vertical-align:middle\9;  } /* IE8 Hack */
+#agreementCheck > div.agreeArea input:checked + label { background-position:left top; }
+#agreementCheck > div.btnArea { overflow:hidden; border:none; background:none; padding:20px 0; margin-bottom:40px; text-align:center; }
+#agreementCheck > div.btnArea button { overflow:hidden; height:54px; margin:0 2px; padding:0; border:none; background:none; vertical-align:middle; }
+#agreementCheck > div.btnArea button img { margin-top:-54px; }
+#agreementCheck > div.btnArea button:hover img { margin-top:0; }
+#agreementCheck > form { margin-bottom:15px; padding-bottom:20px; }
+#agreementCheck > form > ul, #agreementCheck > form > ul li { margin:0; padding:0; list-style:none; }
+#agreementCheck > form > h1 { margin:0 0 15px 0; padding:0 20px; font-size:18px; background:#0780c2; color:#fff; line-height:54px; }
+#agreementCheck > form > ul { padding:0 20px; }
+#agreementCheck > form > ul li { overflow:hidden; line-height:45px; font-size:15px; }
+#agreementCheck > form > ul li + li { border-top:1px dashed #ccc; }
+#agreementCheck > form > ul li h1 { display:inline-block; width:120px; font-size:15px; color:#999; }
+#agreementCheck > form > ul li input, #agreementCheck > form > ul li select { height:32px; padding:5px; font-size:15px; }
+#agreementCheck > form > ul li input[type="tel"]{ width:60px; }
+#agreementCheck > form > ul li input[type="text"] { width:180px; }
+#agreementCheck > form > div { overflow:hidden; margin:10px 20px; padding:0 20px; background:url(../images/study/bg_notice.png); color:#fff; line-height:36px; }
+#agreementCheck div.address { display:inline-block; overflow:hidden; vertical-align:middle; }
+#agreementCheck div.address input[type="tel"]{ margin-bottom:5px; width:120px; border:1px solid #ccc; }
+#agreementCheck div.address input[type="text"]{ margin-bottom:5px; width:680px; }
+#agreementCheck div.address button { height:32px; padding:0 10px; border:1px solid #343434; background:#666; color:#fff; vertical-align:middle; }
+
+/* 상단 날짜및 공지 출력 페이지 */
+div.dateArea { overflow:hidden; margin:10px 20px 1px; background:url(../images/study/bg_notice.png); }
+div.dateArea ul, div.dateArea li { overflow:hidden; margin:0; padding:0; list-style:none; }
+div.dateArea li { float:left; margin-right:20px; font-size:15px; color:#ffdc61; font-size:15px; font-weight:bold; line-height:42px; }
+div.dateArea li + li { border-left:1px solid #787878; }
+div.dateArea li h1 { display:inline-block; padding:0 10px 0 20px; font-size:15px; color:#fff; }
+
+/* 탭메뉴 */
+ul.tabMenu { }
+ul.tabMenu, ul.tabMenu > li { overflow:hidden; margin:0; padding:0;list-style:none; }
+ul.tabMenu { margin:0 20px 10px; background:#787878;  border-bottom:3px solid #454545; }
+ul.tabMenu > li { display:inline-block; float:left; padding:0 15px; background:#666; border-right:1px solid #565656; line-height:36px; color:#cdcdcd; font-weight:bold; cursor:pointer; }
+ul.tabMenu > li + li { border-left:1px solid #787878; }
+ul.tabMenu > li.select { background:#454545; color:#fff; }
+
+/* 교육소개페이지 */
+/* 위탁교육안내 */
+.eduinfoArea { padding-bottom:60px; }
+.eduinfoArea h1 { margin:54px 0 0 66px; font-size:20px; color:#343434; }
+.eduinfoArea h2 { margin:19px 0 0 44px; font-size:15px; font-weight:400; line-height:22px; color:#343434; }
+.eduinfoArea ol { margin:0 0 0 66px; padding:0; }
+.eduinfoArea ol > li { margin-top:60px; font-size:20px; font-weight:700; color:#343434; }
+.eduinfoArea ol > li > ul { margin-top:12px; padding:0; }
+.eduinfoArea ol > li > ul > li { padding-left:14px; background:url(../images/eduinfo/bg_rule_list01.png) 0 10px no-repeat; font-size:15px; font-weight:400; line-height:28px; list-style:none; color:#343434; }
+.eduinfoArea ol li h2 { margin:19px 0 0; }
+.eduinfoArea p { margin:22px 0 0; font-size:13px; font-weight:400; line-height:22px; color:#999; }
+.eduinfoArea table { width:838px; margin-top:18px; border-collapse:collapse; border-bottom:1px solid #b8c4c6; text-align:center; font-size:13px; line-height:22px; }
+.eduinfoArea th { padding:5px 0;background:#eaedee; border-top:1px solid #b8c4c6; border-bottom:1px solid #b8c4c6; }
+.eduinfoArea th + th { border-left:1px solid #b8c4c6; }
+.eduinfoArea tr + tr td { border-top:1px dashed  #b8c4c6; }
+.eduinfoArea td + td { border-left:1px solid #b8c4c6; }
+.eduinfoArea .tableLeft { padding:14px 0 14px 34px; text-align:left; }
+.eduinfoArea .tableLeft p { margin:0; }
+.eduinfoArea .imgInfo01 { margin:75px 0 0 21px; }
+.eduinfoArea .imgInfo02 { margin:22px 0 0 60px; }
+.eduinfoArea .imgInfo03 { margin:5px 0 0 60px; }
+.eduinfoArea .imgInfo04 { margin:5px 0 0 60px; }
+/* 교육진행절차 */
+.logic { overflow:hidden; height:935px; padding-left:374px; background:url(../images/eduinfo/bg_logic.png) 56px 66px no-repeat; }
+.logic h1 { margin:69px 0 0 0; font-size:20px; color:#343434; }
+.logic ol { margin:48px 0 0 0; padding-left:16px; }
+.logic ol li { margin-bottom:65px; font-size:15px; font-weight:700; line-height:22px; color:#565656; }
+.logic ol li span { color:#0780c2; text-decoration:underline; }
+/* 환급절차 */
+.goyong { padding:44px 0 60px; }
+.goyong h1 { margin:0 0 0 44px; font-size:20px; color:#343434; }
+.goyong h2 { margin:19px 0 0 44px; font-size:15px; font-weight:400; line-height:22px; color:#343434; }
+.goyong ol { margin:0 0 0 66px; padding:0; }
+.goyong ol > li { margin-top:60px; font-size:20px; font-weight:700; color:#343434; }
+.goyong ol > li h2 { margin:19px 0 0; }
+.goyong ol > li > img { margin-top:20px; }
+.goyong ol > li button { margin-top:11px; padding:0; background:none; border:none; }
+.goyong ol > li > ul {  padding:0; }
+.goyong ol > li > ul > li { margin-top:22px; list-style:none; font-size:15px; color:#565656; }
+.goyong ol > li > ul > li p { margin:7px 0 0 19px; font-size:15px; font-weight:400; color:#666; }
+.goyong ol > li > ul > li > ol { margin:6px 0 0 35px; }
+.goyong ol > li > ul > li > ol > li { margin:0; list-style-type: lower-alpha; font-size:15px; font-weight:400; line-height:28px; color:#666; }
+.goyong ol > li > ul > li > ol > li > ul { margin:0 0 6px 0	; }
+.goyong ol > li > ul > li > ol > li > ul > li { margin:0; font-size:12px; line-height:20px; color:#999; }
+
+/* 교육이용 안내 */
+.rule { padding-top:44px; }
+.rule ul { margin:0; padding:0; }
+.rule .skyblue { color:#5da3d4; font-weight:700; }
+.rule ol { margin:0 0 0 66px; padding:0; }
+.rule ol > li { margin-bottom:60px; font-size:20px; font-weight:700; color:#343434; }
+.rule ol > li > ul { margin-top:12px; }
+.rule ol > li > ul > li { padding-left:14px; background:url(../images/eduinfo/bg_rule_list01.png) 0 10px no-repeat; font-size:15px; font-weight:400; line-height:28px; list-style:none; color:#343434; }
+.rule ol > li > ul > li > ul > li { padding-left:14px; background:url(../images/eduinfo/bg_rule_list02.png) 0 10px no-repeat; font-size:13px; line-height:21px; list-style:none; color:#787878; }
+.rule ol > li > ul > li > ul > li > ol { margin:0 0 0 14px; }
+.rule ol > li > ul > li > ul > li > ol > li { margin:0; font-size:13px; font-weight:400; line-height:21px; color:#787878; }
+.rule .list > ul > li + li { margin-top:25px; }
+.rule .list > ul > li > ul > li + li { margin-top:21px; }
+
+/* 이벤트게시판 */
+.eventList, .eventList > li{ overflow:hidden; padding:0; margin:0; list-style:none; }
+.eventList { border-bottom:1px solid #999; }
+.eventList li { padding:10px 0; cursor:pointer; }
+.eventList li + li { border-top:1px dashed #999; }
+.eventList li > img { float:left; margin-right:15px; }
+.eventList li h1, .eventList li h2, .eventList li h3, .eventList li h4 { margin:0; padding:0; }
+.eventList li h1 { margin:20px 0 8px; font-size:20px; font-weight:800; }
+.eventList li h2 { margin-bottom:24px; font-size:14px; color:#999; }
+.eventList li h3, .eventList li h4 { display:inline-block; font-size:14px; line-height:20px; padding:2px 12px; border-radius:12px; }
+.eventList li h3 { border:2px solid #2665ae; color:#2665ae; }
+.eventList li h4 { border:2px solid #bd5052; color:#bd5052; }
+
+/* 데이트피커 */
+#datePicker { position:absolute; width:200px; border:1px solid #999; background:#fff; text-align:center; padding:5px !important; }
+#datePicker div { font-size:13px; padding:5px 0; margin:0; line-height:26px;  }
+#datePicker div h1, #datePicker div h2 { font-size:14px !important; display:inline !important; }
+#datePicker div button { width:10px; height:10px; margin:0 8px; border:none !important; background:#fff; text-align:center; vertical-align:middle; }
+#datePicker div button img { width:10px; height:10px; }
+#datePicker table { border-collapse:collapse; width:100% !important; border:none !important; border-top:1px solid #ccc !important; }
+#datePicker th, #datePicker td { background-image:none !important;  }
+#datePicker th { height:20px !important; border:none !important; border-bottom:1px solid #ccc !important; line-height:20px !important; background-color:#fff !important; font-size:12px; }
+#datePicker td h1 { margin:0; padding:0; }
+#datePicker td, #datePicker td h1 { font-size:12px !important; }
+#datePicker td { height:24px !important; cursor:pointer; line-height:24px !important; padding:0; margin:0; cursor:pointer; border:none !important; }
+#datePicker p > button { margin:0; padding:0 10px; height:24px; line-height:24px; background:#efefef; color:#121212; border:1px solid #ccc; }
+#calendarTable .sun { color:#c73333; }
+#calendarTable .sat { color:#338ac7; }
+div.datePicker { display:inline-block; margin:0; padding:0; }
+div.datePicker > input { width:200px; height:32px; border:1px solid #999; vertical-align:middle; background:url(../images/admin/icon_calendar.png) no-repeat right center; }
+
+/**/
+
+
+
+/* 로그인페이지 */
+.orderSearch { overflow:hidden; width:538px; height:438px; margin:0 auto; text-align:center; }
+.orderSearch h1 { margin:40px 0 0; font-size:28px; line-height:22px; }
+.orderSearch h2 { padding:0; margin:20px 0 40px; font-size:15px; line-height:22px; }
+.orderSearch input { height:52px; padding:0 10px; border:1px solid #bac3c5; color:#787878; font-size:15px; font-weight:bold; }
+.orderSearch > input { width:400px; }
+.orderSearch > button { width:400px; height:68px; border:none; color:#fff; font-size:18px; font-weight:bold; }
+.orderSearch > button img { margin-right:10px; }
+.orderSearch > input+input { margin-top:10px; }
+.orderSearch > input+button { margin-top:30px; }
+.orderSearch > div+button { margin-top:15px; }
+.orderSearch > div { overflow:hidden; text-align:left; }
+.orderSearch > div h1 { float:left; width:86px; margin:0 15px 0 0; padding:0; border-right:2px solid #ccc; line-height:52px; font-size:15px; }
+.orderSearch > div + div { margin-top:15px; }
+.orderSearch > div strong { line-height:24px; color:#ef1313; }
+.orderSearch > div input { width:352px; }
+.orderSearch > div input[type="tel"] { width:52px; }
+.orderSearch > div input.email { width:168px; }
+
+
+/* 최종평가 모달 */
+#screenModal .studyModal { position:fixed; top:50%; left:50%; width:450px; margin:-90px 0 0 -225px; padding:20px; border:none; border-top:6px solid #373839; z-index:1111; text-align:right; box-sizing:border-box; }
+#screenModal .studyModal > h1 { margin:0 0 10px 0; padding-bottom:20px; border-bottom:1px solid #ccc; text-align:left; font-size:12px; line-height:18px; font-weight:400; }
+#screenModal .studyModal > button { margin:0 0 0 5px; padding:8px 15px; background:none; border:1px solid #bfc3c4; font-family:'Nanum Gothic'; font-size:12px; }
+#screenModal .studyModal > button:hover { border-color:#0780c2; }
+#screenModal .dark { position:fixed; top:0; left:0; width:100%; height:100%; margin:0; z-index:1000; background:#000; opacity:0.4; }

@@ -1,0 +1,220 @@
+/*
+기본
+Blue = #0780c2;
+*/
+
+
+/* 
+Type01
+dark = #efefef
+pointer = #15a370
+bright = #fff
+*/
+.type01 #Header, 
+.type01 #main_contents li.loginArea > h1,
+.type01 #main_contents li.btnBlock div, 
+.type01 #main_contents li.CSCenter,
+.type01 #main_contents li.favoriteStudy > button.btnPreview, 
+.type01 #main_contents li.favoriteStudy > button { background-color:#15a370; }
+
+.type01 #main_contents > ul >  li > h1 button,
+.type01 #main_contents li.loginArea > form > button,
+.type01 #main_contents li.dateInfo ul,
+.type01 #main_contents li.favoriteStudy > button.btnPreview { background-color:#666; }
+
+.type01 #main_contents li.dateInfo button,
+.type01 #main_contents li.dateInfo h2 { background-color:#565656; }
+
+.type01 #GNB ul > li.studyMenu > h1,
+.type01 #GNB ol li:hover { color:#15a370; }
+
+.type01 #Header > div,
+.type01 #Header > div button,
+.type01 #main_contents li.loginArea > form > button, 
+.type01 #main_contents li.loginArea > h1,
+.type01 #main_contents li.dateInfo button,
+.type01 #main_contents li.dateInfo h3,
+.type01 #main_contents li.dateInfo h2,
+.type01 #main_contents li.favoriteStudy > button { color:#fff; }
+
+.type01 #main_contents li.dateInfo ul li { color:#ccc; }
+
+.type01 #GNB { background:#fff; border-bottom:2px solid #15a370; }
+
+.type01 #GNB ol li, 
+.type01 #GNB > div { color:#343434;}
+
+.type01,
+.type01 #main_contents li.loginArea > form input:focus,
+.type01 #main_contents > ul > li > h1 strong, 
+.type01 #main_contents li.BBSArea > ul li > h1, 
+.type01 #main_contents li.btnBlock > h1, 
+.type01 #GNB > div > div,
+.type01 #main_contents li.myInformation li:hover,
+.type01 #main_contents li.favoriteStudy > h2,
+.type01 #titleArea h1 { color:#35353d; }
+
+.type01 #Header button + button { background-image:url(../images/studycenter/icon_dot05.png); }
+.type01 #Header button.favoriteBtn { background-image:url(../images/studycenter/icon_favorite05.png); }
+.type01 #GNB ul > li > h1 { border-bottom:3px solid #fff; }
+.type01 #GNB ul > li:hover > h1 { border-bottom:3px solid #15a370; }
+.type01 #GNB ul > li.studyMenu > h1 { border-bottom-color:#15a370; }
+.type01 #main_contents li.myInformation li:hover { border-bottom-color:#15a370; }
+
+/* 페이지컬러 */
+.type01 .BBSList ul.lectureList li h1 { color:#33a255; }
+.type01 .BBSList ul.lectureList li h5,
+.type01 #wrap.study div.summuryArea > h3 strong,
+.type01 #loginArea > form > button,
+.type01 #contentsArea.lectureDetail div.summuryArea button { background-color:#33a255; }
+.type01 #contentsArea.lectureDetail > h1 { border-left:3px solid #19815c; }
+.type01 #wrap.study div#contentsArea > ul > li:hover, 
+.type01 #wrap.study div#contentsArea > ul > li.openClass { border-top:4px solid #19815c; }
+.type01 .BBSList ul.lectureList li h5,
+.type01 #wrap.study div.summuryArea > h3 strong { border:1px solid #3ea27e; }
+.type01 #contentsArea.lectureDetail div.summuryArea button { color:#fff; }
+.type01 #contentsArea.lectureDetail table th { background:#e2f3e6; }
+.type01 #wrap.study div#contentsArea > ul > li > table.passCheck th { background:#e2f3e6; }
+.type01 #wrap.study div.summuryArea:hover ul strong, .type05 #wrap.study .openClass div.summuryArea ul strong { color:#19815c; }
+.type01 #wrap.study div#contentsArea > ul > li > table.passCheck td.title { background:#19815c; }
+
+
+/* 
+Type02
+pointer = #4caadc
+bright = #fff
+*/
+.type02 #GNB { background-color:#fff; border-bottom:1px solid #4caadc; }
+.type02 #GNB > div,
+.type02 #GNB ol li { color:#343434; }
+.type02 #Header, 
+.type02 #main_contents li.loginArea > h1,
+.type02 #main_contents li.btnBlock div, 
+.type02 #main_contents li.CSCenter,
+.type02 #main_contents li.favoriteStudy > button.btnPreview, 
+.type02 #main_contents li.favoriteStudy > button { background-color:#4caadc; }
+
+.type02 #main_contents li.loginArea > form > button,
+.type02 #main_contents > ul >  li > h1 button, 
+.type02 #main_contents li.dateInfo h2,
+.type02 #main_contents li.dateInfo ul,
+.type02 #main_contents li.favoriteStudy > button.btnPreview { background-color:#35353d; }
+
+.type02 #GNB ul > li.studyMenu > h1,
+.type02 #GNB ol li:hover { color:#68adde; }
+
+.type02 #Header > div,
+.type02 #Header > div button,
+.type02 #main_contents li.loginArea > form > button, 
+.type02 #main_contents li.loginArea > h1,
+.type02 #main_contents li.dateInfo h2, 
+.type02 #main_contents li.dateInfo ul,
+.type02 #main_contents li.dateInfo button,
+.type02 #main_contents li.favoriteStudy > button { color:#fff; }
+
+.type02,
+.type02 #main_contents li.loginArea > form input:focus,
+.type02 #main_contents > ul > li > h1 strong, 
+.type02 #main_contents li.BBSArea > ul li > h1, 
+.type02 #main_contents li.btnBlock > h1, 
+.type02 #GNB > div > div,
+.type02 #main_contents li.myInformation li:hover,
+.type02 #main_contents li.favoriteStudy > h2,
+.type02 #titleArea h1 { color:#35353d; }
+
+.type02 #main_contents li.dateInfo h3 { color:#4caadc; }
+
+.type02 #Header button + button { background-image:url(../images/studycenter/icon_dot05.png); }
+.type02 #Header button.favoriteBtn { background-image:url(../images/studycenter/icon_favorite05.png); }
+.type02 #GNB ul > li > h1 { border-bottom:3px solid #fff; }
+.type02 #GNB ul > li:hover > h1 { border-bottom:3px solid #4caadc; color:#4caadc; }
+.type02 #GNB ul > li.studyMenu > h1 { border-bottom-color:#68adde; }
+.type02 #main_contents li.myInformation li:hover { border-bottom-color:#35353d; }
+
+/* 페이지컬러 */
+.type02 .BBSList ul.lectureList li h1 { color:#0780c2; }
+.type02 .BBSList ul.lectureList li h5,
+.type02 #wrap.study div.summuryArea > h3 strong,
+.type02 #loginArea > form > button,
+.type02 #contentsArea.lectureDetail div.summuryArea button { background-color:#0780c2 }
+.type02 #contentsArea.lectureDetail > h1 { border-left:3px solid #0780c2; }
+.type02 #wrap.study div#contentsArea > ul > li:hover, 
+.type02 #wrap.study div#contentsArea > ul > li.openClass { border-top:4px solid #0780c2; }
+.type02 .BBSList ul.lectureList li h5,
+.type02 #wrap.study div.summuryArea > h3 strong { border:1px solid #83c0eb; }
+.type02 #contentsArea.lectureDetail div.summuryArea button { color:#fff; }
+.type02 #contentsArea.lectureDetail table th { background:#eaf2f8; }
+.type02 #wrap.study div#contentsArea > ul > li > table.passCheck th { background:#eaf2f8; }
+.type02 #wrap.study div.summuryArea:hover ul strong, .type05 #wrap.study .openClass div.summuryArea ul strong { color:#2665ae; }
+.type02 #wrap.study div#contentsArea > ul > li > table.passCheck td.title { background:#2665ae; }
+
+/* 
+Type05
+dark = #35353d
+pointer = #4caadc
+bright = #fff
+*/
+.type05 #Header, 
+.type05 #main_contents li.loginArea > h1,
+.type05 #main_contents li.btnBlock div, 
+.type05 #main_contents li.CSCenter,
+.type05 #main_contents li.favoriteStudy > button.btnPreview, 
+.type05 #main_contents li.favoriteStudy > button { background-color:#4caadc; }
+
+.type05 #GNB,
+.type05 #main_contents li.loginArea > form > button,
+.type05 #main_contents > ul >  li > h1 button, 
+.type05 #main_contents li.dateInfo h2,
+.type05 #main_contents li.dateInfo ul,
+.type05 #main_contents li.favoriteStudy > button.btnPreview { background-color:#35353d; }
+
+.type05 #GNB ul > li.studyMenu > h1,
+.type05 #GNB ol li:hover { color:#68adde; }
+
+.type05 #Header > div,
+.type05 #Header > div button,
+.type05 #GNB > div, .type05 #GNB ol.opened li,
+.type05 #main_contents li.loginArea > form > button, 
+.type05 #main_contents li.loginArea > h1,
+.type05 #main_contents li.dateInfo h2, 
+.type05 #main_contents li.dateInfo ul,
+.type05 #main_contents li.dateInfo button,
+.type05 #main_contents li.favoriteStudy > button { color:#fff !important; }
+
+.type05,
+.type05 #main_contents li.loginArea > form input:focus,
+.type05 #main_contents > ul > li > h1 strong, 
+.type05 #main_contents li.BBSArea > ul li > h1, 
+.type05 #main_contents li.btnBlock > h1, 
+.type05 #GNB > div > div,
+.type05 #main_contents li.myInformation li:hover,
+.type05 #main_contents li.favoriteStudy > h2,
+.type05 #titleArea h1 { color:#35353d; }
+
+.type05 #main_contents li.dateInfo h3 { color:#4caadc; }
+
+.type05 #Header button + button { background-image:url(../images/studycenter/icon_dot05.png); }
+.type05 #Header button.favoriteBtn { background-image:url(../images/studycenter/icon_favorite05.png); }
+.type05 #GNB ul > li > h1 { border-bottom:3px solid #35353d; }
+.type05 #GNB ul > li:hover > h1 { border-bottom:3px solid #fff; }
+.type05 #GNB ul > li.studyMenu > h1 { border-bottom-color:#68adde; }
+.type05 #main_contents li.myInformation li:hover { border-bottom-color:#35353d; }
+
+/* 페이지컬러 */
+.type05 .BBSList ul.lectureList li h1 { color:#0780c2; }
+.type05 .BBSList ul.lectureList li h5,
+.type05 #wrap.study div.summuryArea > h3 strong,
+.type05 #loginArea > form > button,
+.type05 #contentsArea.lectureDetail div.summuryArea button { background-color:#0780c2 }
+.type05 #contentsArea.lectureDetail > h1 { border-left:3px solid #0780c2; }
+.type05 #wrap.study div#contentsArea > ul > li:hover, 
+.type05 #wrap.study div#contentsArea > ul > li.openClass { border-top:4px solid #0780c2; }
+.type05 .BBSList ul.lectureList li h5,
+.type05 #wrap.study div.summuryArea > h3 strong { border:1px solid #83c0eb; }
+.type05 #contentsArea.lectureDetail div.summuryArea button { color:#fff; }
+.type05 #contentsArea.lectureDetail table th { background:#eaf2f8; }
+.type05 #wrap.study div#contentsArea > ul > li > table.passCheck th { background:#eaf2f8; }
+.type05 #wrap.study div.summuryArea:hover ul strong, .type05 #wrap.study .openClass div.summuryArea ul strong { color:#2665ae; }
+.type05 #wrap.study div#contentsArea > ul > li > table.passCheck td.title { background:#2665ae; }
+.type05 #snb li:hover {  border:1px solid #4caadc; }
+.type05 #snb li.select { background:#4caadc; border:1px solid #4caadc; color:#fff; }

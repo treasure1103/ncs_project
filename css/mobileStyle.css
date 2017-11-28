@@ -1,0 +1,225 @@
+0/* 나눔고딕 */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+/* font-family: 'Nanum Gothic', serif; */
+
+/* open sans */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800);
+/* font-family:'Open Sans', sans-serif; */
+
+body {
+	margin: 0;
+	padding: 0;
+	/* [disabled]font-family:'Nanum Gothic', serif; */
+	font-size: 12px;
+}
+input, button, select, textarea { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+button { cursor:pointer; }
+button img, img { vertical-align:middle; }
+.fLeft { float:left; margin-right:5px; }
+.fRight { float:right; margin-left:5px; }
+.Left { text-align:left; margin-right:5px; }
+.Right { text-align:right; margin-left:5px; }
+
+strong.red, span.red { color:#c73333 !important; }
+strong.blue, span.blue { color:#2665ae !important; }
+
+#loginPage { padding:0 3%; background:#f5f8f9; }
+#loginPage hgroup { text-align:center; }
+#loginPage hgroup > img { width:180px; margin:25px 0 8px; }
+#loginPage hgroup h1 { margin:15px 0 25px; padding:0; font-size:12px; }
+#loginPage hgroup h1 strong { color:#2665ae; }
+#loginArea { overflow:hidden; padding:3%; border:1px solid #c2c2c2; border-radius:6px; background:#fff; text-align:center; }
+#loginArea input, #loginArea button { border-radius:3px; }
+#loginArea input { border:1px solid #ccc; background:#f9f9f9; height:42px; }
+#loginArea input:hover { border:1px solid #999; background:#fff; }
+#loginArea input[type="text"], #loginArea input[type="password"], #loginArea button { width:100%; padding:0 5%; margin-bottom:5px;}
+#loginArea button { height:56px; margin-top:5px; border:1px solid #2665ae; background:#68adde; color:#fff; font-weight:bold; font-size:15px; }
+#loginArea button img { width:16px; margin-right:10px; }
+#loginArea a { font-size:12px; color:#999; }
+#loginArea form > h1 { margin-bottom:10px; padding-bottom:10px; border-bottom:1px dashed #ccc; font-size:10px; font-weight:normal; color:#565656; }
+#loginArea form > div { padding-bottom:10px; margin-bottom:10px; border-bottom:1px dashed #ccc; font-size:12px; text-align:left; }
+#loginArea form > div > h1 { display:inline-block; width:25%; font-size:12px; margin:0; padding:0; line-height:42px; text-align:left; }
+#loginArea form > div > input[name="userName"], #loginArea form > div > input[name="userID"]{ width:70%; }
+#loginArea form > div > input[type="tel"] { width:11%; }
+#loginArea form > div > input.email { width:32%; }
+#loginArea form > div > strong { display:block; margin-top:5px; padding-left:25%; }
+
+/* GNB */
+header { overflow:hidden; height:40px; border-bottom:2px solid #1e4c82; background:#2665ae; text-align:center; }
+header > h1 { margin:0; padding:0; font-size:15px; color:#fff; line-height:40px; }
+header > button { top:0; left:0; position:absolute; width:40px; height:40px; padding:0; margin:0; background:none; border:none; border-right:1px solid #1e4c82; text-align:center; }
+header > button img { width:40px; height:40px; }
+header > h1 + button { top:0; left:100%; position:absolute; width:40px; height:40px; padding:0; margin:0 0 0 -40px; background:none; border:none; border-right:none; border-left:1px solid #1e4c82; text-align:center; }
+header > h1 + button img { width:20px; height:20px; }
+
+.searchArea { background:#666; padding:10px 0; text-align:center; }
+.searchArea input[type="text"] { width:90%; height:36px; padding:0 10px 0 35px; border:none; border-radius:8px; background:url(../images/mobile/icon_search.png) no-repeat 10px center #fff; background-size:18px; }
+
+/* studyPage */
+#studyPage { margin:0; padding:0; background:#f5f8f9; }
+#studyPage > hgroup { height:42px; border-bottom:1px solid #ccc; line-height:42px; text-align:center; background:#fff; }
+#studyPage > hgroup > h1 { margin:0; padding:0; font-size:12px; color:#565656; line-height:42px; font-weight:normal; }
+#studyPage > hgroup > h1 b, hgroup > h1 strong { font-weight:bold; color:#2665ae; }
+#studyPage > section article { overflow:hidden; margin:10px 3%; background:#fff; border-radius:6px; border:1px solid #c2c2c2; }
+#studyPage > section article + article { margin-top:10px; }
+#studyPage > section article > div { overflow:hidden; height:64px; padding:8px 40px 8px 3%; }
+#studyPage > section article > div h1, #studyPage > section article > div h2 { overflow:hidden; margin:0; padding:0 15px 0 0; text-overflow:ellipsis; white-space:nowrap; }
+#studyPage > section article > div h1 { font-size:12px; margin-bottom:3px; color:#565656; }
+#studyPage > section article > div h2 { font-size:10px; margin-bottom:8px; color:#999; }
+#studyPage > section article > div ul, #studyPage > section article > div li { list-style:none; padding:0; margin:0; }
+#studyPage > section article > div ul { overflow:hidden; margin-right:15px; border:1px solid #999; border-radius:3px; background:#f8f8f8; }
+#studyPage > section article > div li { float:left; width:33%; color:#565656; line-height:20px; font-size:10px; text-align:center; letter-spacing:-0.05em; }
+#studyPage > section article > div li strong { font-size:15px; }
+#studyPage > section article > div li + li { border-left:1px solid #999; }
+#studyPage > section article > div button { position:absolute; left:97%; width:40px; height:80px; margin:-8px 0 0 -41px; border:none; border-left:1px solid #ccc; background:url(../images/mobile/btn_open.png) no-repeat center #efefef; background-size:18px; }
+
+#studyPage > section article.openStudy > div button { background:url(../images/mobile/btn_close.png) no-repeat center #83c0eb; background-size:18px; }
+#studyPage > section article.openStudy > div h1 { font-size:12px; margin-bottom:3px; color:#2665ae; }
+#studyPage > section article.openStudy > div li strong { font-size:15px; color:#2665ae; }
+#studyPage > section article > div.notMobile button { background:url(../images/mobile/btn_hide.png) no-repeat center #ed8a8a; background-size:18px; }
+
+#studyPage > section article > ol, #studyPage > section article > ol li { margin:0; padding:0; list-style:none; }
+#studyPage > section article > ol { border-top:1px solid #c2c2c2; }
+#studyPage > section article > ol li { overflow:hidden; padding:8px 40px 8px 0; }
+#studyPage > section article > ol li + li { border-top:1px dashed #ccc; }
+#studyPage > section article > ol h1, #studyPage > section article > ol h2, #studyPage > section article > ol h3 { margin:0; padding:0; }
+#studyPage > section article > ol h3 { float:left; width:17%; margin-right:10px; padding-right:5px; border-right:1px solid #ccc; font-size:10px; text-align:right; color:#999; line-height:16px; }
+#studyPage > section article > ol h3 strong { font-size:15px; color:#565656; }
+#studyPage > section article > ol h3 span { font-size:12px; color:#d23636; font-weight:bold; }
+#studyPage > section article > ol h1 { overflow:hidden; font-size:12px; color:#565656; line-height:18px; white-space:nowrap; text-overflow:ellipsis; }
+#studyPage > section article > ol h2 { font-size:10px; color:#999; line-height:15px; }
+#studyPage > section article > ol button { position:absolute; left:97%; width:30px; height:30px; margin:3px 0 0 -41px; border:none; border-radius:15px; background:#91a2b6; }
+#studyPage > section article > ol button > img { width:14px; }
+#studyPage > section article.noList { line-height:36px; text-align:center; font-size:12px; color:#666; }
+
+/*유의사항*/
+#caution { margin:3% 3% 0; padding:5% 3%; border-radius:6px; background:url(../images/mobile/bg_notice.png); color:#fff; font-size:12px; text-align:center; line-height:18px; }
+#caution img { width:40px; margin-bottom:5px; }
+#caution strong { color:#ffdc61; }
+
+/* 동영상 재생페이지 */
+#viewMovie { }
+#viewMovie > video, #viewMovie > iframe { width:94%; margin:3% 3% 0; background:#121212; }
+#viewMovie > div { overflow:hidden; display:block; width:94%; margin:0 3%; background:url(../images/mobile/bg_modal.png); z-index:999; }
+#viewMovie > div > div { background:#343434; color:#fff; text-align:center; font-size:10px; line-height:26px; }
+#viewMovie > div > div strong { font-size:15px; }
+#viewMovie article { overflow:hidden; margin:10px 3%; padding:3% 5%; background:#fff; border-radius:6px; border:1px solid #c2c2c2; font-size:12px; }
+#viewMovie article h1 { margin:0 0 8px 0; padding:0 0 8px 0; border-bottom:1px dashed #ccc; font-size:14px; color:#2665ae; line-height:28px; }
+#viewMovie > iframe { border:none; padding:0; }
+
+#viewMovie button { height:42px; border:none; background:none; background-repeat:no-repeat; background-position:center; background-size:20px; }
+#viewMovie button + button { border-left:1px solid #777; }
+#viewMovie button.btnPrev, #viewMovie button.btnNext { width:20%; }
+#viewMovie button.btnList { width:60%; }
+#viewMovie button.btnPrev { background-image:url(../images/mobile/btn_playprev.png); }
+#viewMovie button.btnNext { background-image:url(../images/mobile/btn_playnext.png); }
+#viewMovie button.btnList { background-image:url(../images/mobile/btn_playlist.png); }
+
+/* boardPage */
+#boardPage { margin:0; padding:0; background:#f5f8f9; }
+#boardPage > ul, #boardPage > ul li { margin:0; padding:0; list-style:none; background:#fff; }
+#boardPage > ul { border-bottom:1px solid #999; }
+#boardPage > ul li { padding:10px 3%; cursor:pointer; }
+#boardPage > ul li + li { border-top:1px dashed #ccc; }
+#boardPage > ul li h1, #boardPage > ul li h2 { margin:0; padding:0; }
+#boardPage > ul li h1 { overflow:hidden; margin-bottom:5px; font-size:12px; white-space:nowrap; text-overflow:ellipsis; }
+#boardPage > ul li h2 { font-size:10px; color:#999 }
+#boardPage > article { background:#fff; }
+#boardPage > article > ul, #boardPage  > article > ul li { overflow:hidden; margin:0; padding:0; list-style:none; }
+#boardPage > article > ul { border-bottom:1px solid #999; }
+#boardPage > article > ul li { overflow:hidden; padding:8px 3%; line-height:18px; }
+#boardPage > article > ul li + li { border-top:1px dashed #ccc; }
+#boardPage > article > ul li > h1, #boardPage > article > ul li > h2 { margin:0; padding:0; }
+#boardPage > article > ul li > h1 { font-size:12px; }
+#boardPage > article > ul li > h2 { font-size:10px; color:#999; }
+#boardPage > article > ul li > div { min-height:240px; line-height:15px; font-size:10px; }
+#boardPage > article > button, #boardPage > button { width:100%; height:32px; border:none; border-bottom:1px solid #999; background:#787878; color:#fff; font-size:12px; }
+#boardPage > form.writeform { background:#fff;}
+#boardPage > form.writeform ul, #boardPage > form.writeform li { margin:0; padding:0; list-style:none; }
+#boardPage > form.writeform li { padding:5px 10px; font-size:12px; }
+#boardPage > form.writeform li h1 { display:inline-block; width:70px; font-size:12px; border-right:2px solid #ccc; line-height:18px; margin-right:8px; }
+#boardPage > form.writeform li input { padding:0 5px; height:28px; border-radius:6px; border:1px solid #999; }
+#boardPage > form.writeform li input[type="tel"]{ width:42px; }
+#boardPage > form.writeform li textarea { width:100%; height:64px; padding:5px; border-radius:6px; line-height:18px; }
+#boardPage > form.writeform li + li { border-top:1px dashed #ccc; }
+#boardPage div.btnArea { overflow:hidden; }
+#boardPage div.btnArea button { width:50%; height:32px; border:none; border-bottom:1px solid #999; background:#787878; color:#fff; font-size:12px; }
+#boardPage div.btnArea button + button { border-left:1px solid #343434; }
+
+/* reply */
+.commentArea { padding:10px; background:#f6f6f6; }
+.commentArea > form h1 { margin:0 0 5px 0; padding:0; font-size:12px;  }
+.commentArea > form textarea, .commentArea > form button { vertical-align:middle; font-size:12px; height:42px; }
+.commentArea > form textarea { width:80%; border-radius:4px 0 0 4px; border-right:none; }
+.commentArea > form button { width:20%; border-radius:0 4px 4px 0; border-left:none; background:#343434; border:none; color:#fff; font-weight:bold; }
+.commentList, .commentList li { overflow:hidden; margin:0; padding:0; font-size:12px; list-style:none; }
+.commentList { margin-top:10px; border-top:1px solid #999; border-bottom:1px solid #999; }
+.commentList li { background:#fff; padding:10px 15px; }
+.commentList li + li { border-top:1px dashed #ccc; }
+.commentList li h1 { font-size:12px; margin:0; padding:0; }
+.commentList li div { margin-bottom:5px; }
+.commentList li div textarea, .commentList div button { vertical-align:middle; font-size:12px; height:42px; }
+.commentList li div textarea { width:77%; border-radius:4px 0 0 4px; border-right:none; }
+.commentList li div button { width:23%; border-radius:0 4px 4px 0; border-left:none; background:#343434; border:none; color:#fff; font-weight:bold; }
+.commentList li form > button { height:24px; border:1px solid #999; border-radius:0; margin-right:2px; background:#efefef; font-size:12px; }
+.commentList li.noReply { line-height:30px; color:#999; }
+
+/* Paser */
+.pager { overflow:hidden; padding:5px 0; text-align:center; }
+.pager a, .pager b, .pager button { vertical-align:middle; background:#fff; }
+.pager button { width:26px; height:26px; margin:0; padding:3px; border:1px solid #dfdfdf; }
+.pager button img { width:20px; height:20px; vertical-align:middle; }
+.pager a, .pager b { display:inline-block; height:24px; padding:0 10px; border:1px solid #dfdfdf; text-align:center; line-height:24px; font-size:12px; font-weight:bold; }
+.pager a { color:#787878; text-decoration:none; }
+.pager b { color:#ec772d; }
+.pager a:hover { text-decoration:underline; }
+
+/* nav */
+nav { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:url(../images/mobile/bg_modal.png); z-index:999;  }
+nav div { position:absolute; left:0; width:50%; height:100%; margin-left:-50%; background:no-repeat center 90% #2665ae; background-size:60%; text-align:center; }
+nav div menu, nav div li { margin:0; padding:0; list-style:none; }
+nav div li { padding:0 10px; border-bottom:1px solid #5184be; line-height:48px; font-size:15px; color:#fff; text-align:left; }
+nav div li:nth-child(1) { background:#1e4c82; }
+nav div li > button { float:right; width:20px; height:20px; margin:14px 10px 14px 0; padding:0; border:none; background:none; }
+nav div li > button > img { width:20px; height:20px; }
+nav div > button { width:80%; height:32px; margin:15px auto; background:#1e4c82; border-radius:3px; border:2px solid #5184be; color:#73acd6; font-weight:bold; font-size:12px; }
+
+/* html Player */
+#htmlPlayer { display:block; background:#121212; width:100%; }
+
+/* 캡차 */
+#captcha { overflow:hidden; margin:0; padding:0; border-top:5px solid #0780c2; }
+#captcha > form { display:none; }
+#captcha input[type="button"] { border-radius:0; background-color:transparent; border:none; }
+#captcha div.header { overflow:hidden; height:42px; border-bottom:1px solid #0780c2; background:#fff; padding:0 15px; line-height:42px; }
+#captcha div.header > h1 { display:inline-block; margin:0; padding:0; font-size:18px; color:#0780c2; }
+#captcha div.header > input { float:right; height:22px; margin:10px 0; border:2px solid #0780c2; color:#0780c2; background:none; }
+#captcha div.info_area { text-align:center; padding:0 15px; }
+#captcha div.info_area h1, #captcha div.info_area h2 { padding:0; margin:0; }
+#captcha div.info_area h1 { margin:15px 0 5px; font-size:15px; color:#343434; }
+#captcha div.info_area h2 { margin:0 0 8px; padding-bottom:15px; font-size:12px; color:#898989; border-bottom:1px dashed #ccc; }
+#captcha div.info_area ul, #captcha div.info_area li { margin:0; padding:0; list-style:none; }
+#captcha div.info_area li { line-height:24px; }
+#captcha div.capcha_div { margin:20px; padding:20px; background:#fff; border:1px solid #ccc; text-align:center; }
+#captcha div.capcha_div div { overflow:hidden; height:62px; }
+#captcha div.capcha_div div + div { height:34px; margin-top:20px; padding-bottom:10px; border-bottom:1px dashed #ccc; }
+#captcha div.capcha_div div > img { display:block; margin:0 auto; }
+#captcha div.capcha_div div > input { width:40%; height:24px;  background:#efefef; border:1px solid #999; color:#565656; }
+#captcha div.capcha_div h2 { color:#0780c2; font-size:12px; }
+#captcha div.capcha_div > input[type="text"] { width:82%; border:1px solid #999; height:28px; text-align:center;  }
+#captcha div.capcha_div > input[type="button"] { width:82%; height:36px; margin-top:5px; border:none; background:#0780c2; color:#fff;  }
+
+/* 스크린모달 */
+#screenModal { overflow-x:hidden; overflow-y:auto; width:100%; height:100%; background:#f2f6f7; }
+#screenModal .caution { margin:3% 3% 0; padding:5% 5%; border-radius:6px; background:url(../images/mobile/bg_notice.png); color:#fff; font-size:12px; text-align:center; line-height:18px; }
+#screenModal .caution img { width:40px; margin-bottom:5px; }
+#screenModal .caution strong, #screenModal .caution b { color:#ffdc61; }
+#screenModal .caution p br { display:none; }
+#screenModal .caution p br + br { display:block; }
+#screenModal .caution p + h1 { margin-top:40px; }
+#screenModal .mobileCert > ul { overflow:hidden; margin:10px 3%; padding:5%; background:#fff; border-radius:6px; border:1px solid #c2c2c2; list-style:none; }
+#screenModal .mobileCert > ul > li > h1 { margin:0; text-align:center; font-size:15px; color:#333; }
+#screenModal .mobileCert > ul > li button { margin-top:20px; width:100%; padding:8px 0; border:1px solid #999; background:#f8f8f8; border-radius:3px; font-size:12px; color:#565656; }
+#screenModal .btnArea { margin:10px 3%; }
+#screenModal .btnArea button { width:49%; padding:12px 0; background:#787878; border:1px solid #787878; border-radius:3px; font-size:12px; color:#fff; box-sizing:border-box; }
+#screenModal .btnArea button + button { margin-left:1%; }

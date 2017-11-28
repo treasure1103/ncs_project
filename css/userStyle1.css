@@ -1,0 +1,45 @@
+/* 나눔고딕 */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+/* font-family: 'Nanum Gothic', serif; */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800);
+/* font-family:'Open Sans', sans-serif; */
+
+body { margin:0; padding:0; font-family:'Nanum Gothic', serif; font-size:12px; background:#f2f6f7; }
+input, button, select, textarea { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+button { cursor:pointer; }
+button img, img { vertical-align:middle; }
+.fLeft { float:left; margin-right:5px; }
+.fRight { float:right; margin-left:5px; }
+.Left { text-align:left !important; margin-right:5px !important; }
+.Right { text-align:right; margin-left:5px; }
+
+strong.red, span.red { color:#c73333 !important; }
+strong.blue, span.blue { color:#2665ae !important; }
+
+/* 학습하기 모달 */
+#studyPopup  { overflow:hidden; margin:0; padding:0; background:#666; zoom:1; }
+#studyPopup  > button { width:10px; border:none; padding:0; margin:0; background:url(bg_btnarea.jpg) repeat-y; z-index:999; vertical-align:top; }
+div#popupStudyArea, #studyPopup iframe { margin:0; padding:0; }
+#popupStudyArea { position:absolute; overflow-y:scroll; overflow-x:hidden; top:0; width:338px; padding:0; background:#f2f6f7; z-index:900; }
+#popupStudyArea h1, #popupStudyArea h2, #popupStudyArea h5 { margin:0; padding:0; }
+#popupStudyArea > h1 { padding:0 20px; margin:20px 0 8px; font-size:15px; color:#2665ae; }
+#popupStudyArea > h2 { padding:0 20px; margin-bottom:20px; font-size:12px; color:#121212; font-weight:normal; }
+#popupStudyArea > h5 { padding:0 20px; background:#0780c2; line-height:30px; color:#edf9ff; text-align:center; font-size:12px; }
+#popupStudyArea > h5 strong { color:#fff; font-size:15px; }
+#popupStudyArea ul, #popupStudyArea li { overflow:hidden; list-style:none; margin:0; padding:0; }
+#popupStudyArea > ul { margin:0 10px; border:1px solid #ccc; border-bottom:none; background:#ccc; }
+#popupStudyArea > ul > li { float:left; width:49.9%; line-height:40px; font-weight:bold; text-align:center; cursor:pointer; }
+#popupStudyArea > ul > li.select { background:#fff; color:#0780c2; }
+#popupStudyArea > div, #popupStudyArea > form { margin:0 10px 20px; border:1px solid #ccc; border-top:none; background:#fff; }
+#popupStudyArea > div h1 { margin:10px 0 5px; font-size:12px; color:#0780c2; }
+#popupStudyArea > div ul { padding:10px; }
+#popupStudyArea > div li { padding:10px; line-height:18px; }
+#popupStudyArea > div li + li { border-top:1px dashed #ccc; }
+#popupStudyArea > form { display:block; width:279px; padding:10px; }
+#popupStudyArea > form textarea { width:281px; height:300px; border:1px solid #ccc; margin:0; padding:10px; }
+*:first-child+html #popupStudyArea > form textarea { width:260px; margin-left:-10px; }
+#popupStudyArea > form h1 { margin:10px 0 5px; font-size:12px; color:#0780c2; }
+#popupStudyArea > form h2 { margin:10px 0; font-size:12px; line-height:18px; font-weight:normal; }
+#popupStudyArea > form > button { width:281px; height:42px; margin:10px 0; border:1px solid #999; color:#565656; background:#fff; font-size:12px; font-weight:bold; }
+#popupStudyArea > form > button:hover { background:#efefef; }
+#popupStudyArea > button { width:303px; height:42px; margin:0 10px 10px; border:none; background:#0780c2; color:#fff; font-size:15px; font-weight:bold; }

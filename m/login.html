@@ -1,0 +1,46 @@
+<? include '../lib/header.php'; ?>
+<? session_start(); ?>
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta http-equiv='cache-control' content='no-cache'>
+<meta http-equiv='expires' content='0'>
+<meta http-equiv='pragma' content='no-cache'>
+<title><?=$_siteName?> 모바일 학습센터</title>
+<!--<link rel="shortcut icon"  href="../images/estory_icon.png">  <--안드로이드-->
+<!--<link rel="apple-touch-icon"  href="../images/estory_icon.png" > <--아이폰-->
+<link rel="stylesheet" href="../css/mobileStyle.css">
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../frontScript/login.js"></script>
+<script type="text/javascript" src="../js/userUI.js"></script>
+<script type="text/javascript">
+  var loginUserID = "<?=$_SESSION['loginUserID'] ?>";     	//로그인 유저 아이디
+  var loginUserName = "<?=$_SESSION['loginUserName'] ?>"; 	//로그인 유저 이름
+  var loginUserLevel = "<?=$_SESSION['loginUserLevel'] ?>";  //로그인 유저 아이디
+  var pageMode = 'mobilePage';
+  var mode = '<?=$_GET[mode]; ?>'
+  var page = '<?=$_GET[page]; ?>'
+  mode = mode ? mode : '';
+  if(loginUserID != ''){
+	  //alert(loginUserName+'님 환영합니다.');
+	  top.location.href='../m/study.html'
+  }
+  $(document).ready(function() {
+	  loginPage(mode,page);
+  });
+</script>
+</head>
+
+<body id="loginPage">
+<hgroup>
+  <img src="../images/global/logo_gnb.png" alt="로고">
+  <h1><strong><?=$_siteName?> 스마트교육 센터</strong>에 오신 것을 환영합니다.</h1>
+</hgroup>
+<div id="loginArea">
+
+</div>
+<p style="text-align: center;"><a href="http://<?=$_siteURL?>/main" >PC화면 보기</a></p>
+</body>
+</html>

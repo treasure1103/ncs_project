@@ -1,0 +1,160 @@
+<? include '../lib/header.php'; ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="user-scalable=yes">
+<meta http-equiv='cache-control' content='no-cache'>
+<meta http-equiv='expires' content='0'>
+<meta http-equiv='pragma' content='no-cache'>
+<title>이상에듀</title>
+<link rel="stylesheet" href="../css/mobileStyle.css" />
+<script type="text/javascript">
+  var loginUserID = "<?=$_SESSION['loginUserID'] ?>";     	//로그인 유저 아이디
+  var loginUserName = "<?=$_SESSION['loginUserName'] ?>"; 	//로그인 유저 이름
+  var loginUserLevel = "<?=$_SESSION['loginUserLevel'] ?>";  //로그인 유저 아이디
+  var pageMode = 'mobilePage';
+  if(loginUserID == ''){
+	  alert('로그인이 필요합니다.')
+	  top.location.href='/m/'
+  }
+</script>
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+  var useApi = '../api/apiStudyChapter.php';
+  var progressApi = '/api/apiProgressCheck.php';
+  var consultApi = '../api/apiConsult.php';
+  var contentsCode = '<?=$_GET[contentsCode]; ?>'; //검색 페이지
+  var chapter = '<?=$_GET[chapter]; ?>'; //검색 페이지
+  var lectureOpenSeq = '<?=$_GET[lectureOpenSeq]; ?>'; //검색 페이지
+  var check = '<?=$_GET[check]; ?>'; //검색 페이지
+  var totalTime = 0;
+  var studyChapter = '';
+  var sendTime = 10000; //진도체크시간
+  var nowPageURL = '';
+  var nowPage = '';
+  var sourceType = '';
+  //맴버정보 기록
+  
+  var studyPopup = $.get(useApi,{'contentsCode':contentsCode,'chapter':chapter,'lectureOpenSeq':lectureOpenSeq},function(data){
+	  var contentsName = data.contentsName;
+	  sourceType = data.sourceType;
+	  $.each(data.progress, function(){
+		  if(check != 'check'){
+			  nowPageURL = this.chapterMobilePath;
+		  }else{
+			  if(this.mobileLastPage == null || this.mobileLastPage == '') {
+				  nowPageURL = this.chapterMobilePath;
+			  } else {
+				  nowPageURL = this.mobileLastPage;
+			  }
+		  }
+		  $('iframe').attr('src',nowPageURL);
+	  })
+	  $('iframe').bind({
+		  load:function(){
+			  checkSize();
+			  checkChapter();
+			  progressSend();
+			  //opener.parent.viewStudyDetail(seq,contentsCode,lectureOpenSeq,'Y');
+			  //opener.location.href='http://esangedu.kr/study/';
+		  }
+	  })
+  })
+  .done(function(){	  
+	  //타이머
+	  timeCheck = setInterval(function(){timer()},1000);
+	  
+	  totalTime = Number(totalTime);
+	  function timer(){
+		  totalTime += 1;
+	  }
+	  
+	  //진도보내기 시간별
+	  progressCheck = setInterval(function(){progressSend()},sendTime)	  
+  })
+  
+  function progressSend(){
+	  //alert(lectureOpenSeq+'/'+contentsCode+'/'+chapter+'/'+nowPage+'/'+nowPageURL+'/'+totalTime)
+	  var sendData = 'lectureOpenSeq='+lectureOpenSeq+'&contentsCode='+contentsCode+'&chapter='+chapter+'&nowPage='+nowPage+'&nowPageURL='+nowPageURL+'&totalTime='+totalTime+'&sourceType='+sourceType;
+	  $('input[name="addItem01"]').val(nowPageURL);
+	  $.post(progressApi,sendData);
+  }
+  
+  function checkChapter(){
+	  nowPageURL = frames[0].document.location.href;
+	  nowPages = nowPageURL.slice(7);//http자르기
+	  var filearr = nowPages.split("/");
+	  //페이지진도 계산
+	  var selectFile = filearr.length -1;
+	  var nowPageFull = filearr[selectFile].replace('.html','').replace('.htm','');
+	  var nowPageURLFull = filearr[selectFile];
+	  nowPage = Number(nowPageFull.substr(nowPageFull.length-2,2));//페이지 진도
+	  
+	  //현재 주소값 계산
+	  var nowAddress = filearr[0];
+	  nowAddress = nowAddress.length;
+	  nowPageURL = nowPageURL.slice(7+Number(nowAddress))
+  }
+  function checkSize(){	  
+	  //var flashWidth = $('iframe').contents().width();
+	  //var flashHeight = $('iframe').contents().height();
+	  //alert(flashWidth)
+	  //$('iframe').css({'width':flashWidth+'px','height':flashHeight+'px'})
+	  //$('#studyPopup > div').css({'height':flashHeight+'px'})
+  }
+  
+  function endStudy(){
+	  progressSend();
+	  opener.location.href='http://m.esangedu.kr/study/';
+	  window.close();
+  }
+  function overlap_loginchk(){
+	  //jsloginchk.src="../api/crossLogin.php";
+	  $.ajax({
+		  url:'../api/crossLogin.php',
+		  dataType:'JSON',
+		  success:function(data){
+			  if(data.result != 'success'){
+				  alert(data.result);
+				  opener.location.href="http://m.esangedu.kr";
+				  self.close();
+			  }
+		  }
+	  })
+	  /*
+	  $.get('../api/crossLogin.php',function(data){
+	  alert(data.result)
+		  if(data.result != 'success'){
+			  alert(data.result);
+			  opener.location.href="http://esangedu.kr";
+			  self.close();
+		  }
+	  })
+	  */
+	  window.setTimeout("overlap_loginchk()",10000);
+  }
+  $(document).ready(function(){
+	  frameResize()    
+  });
+  $(window).resize(function(){
+	  frameResize()
+  })
+  
+  function frameResize(){
+	  var deviceWidth = $(window).width();
+	  var deviceHeight = $(window).height();
+	  if(deviceWidth >= deviceHeight){
+		  $('#htmlPlayer').height(deviceHeight)
+	  }else{
+		  $('#htmlPlayer').height(deviceWidth)
+	  }
+	  //alert(deviceWidth+'/'+deviceHeight)
+	  $('#htmlPlayer').width(deviceWidth)
+  }
+</script>
+</head>
+
+<body onLoad="overlap_loginchk();">
+  <iframe id="htmlPlayer" frameborder="0" scrolling="no"></iframe>
+</body>

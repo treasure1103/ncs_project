@@ -1,0 +1,78 @@
+<?PHP include './lib/referer.php'; ?>
+<?PHP include './lib/global.php'; ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<!--네이버 검색 메타태그 추가 17.10.24 최원오 대리-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="국비환급 인터넷교육, 인터넷산업안전보건교육, 인터넷성희롱예방교육, 엔씨에스이러닝, 엔시에스이러닝,앤씨에스이러닝, 엔시에스이러닝">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="NCS이러닝센터">
+<meta property="og:description" content="국비환급 인터넷교육, 인터넷산업안전보건교육, 인터넷성희롱예방교육, 엔씨에스이러닝, 엔시에스이러닝,앤씨에스이러닝, 엔시에스이러닝">
+<meta property="og:image" content="http://www.ncscenter.kr/images/global/logo_gnb.png">
+<meta property="og:url" content="http://www.ncscenter.kr/">
+<!--네이버 검색 메타태그 추가 17.10.24 최원오 대리-->
+
+<title><?=$_siteName?></title>
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+</head>
+
+<body>
+<?
+	//Check Mobile
+	$mAgent = array("iPhone","iPod","Android","Blackberry",
+			"Opera Mini", "Windows ce", "Nokia", "sony" );
+	$chkMobile = false;
+	for($i=0; $i<sizeof($mAgent); $i++){
+			if(stripos( $_SERVER['HTTP_USER_AGENT'], $mAgent[$i] )){
+					$chkMobile = true;
+					break;
+			}
+	}
+
+	$domain = $_SERVER["HTTP_HOST"];
+	$subDomain = explode('.'.$_siteURL, $domain);
+
+	if($chkMobile) { // 모바일 접속
+		if($subDomain[0] == 'tutor' || $subDomain[0] == 'admin'){
+				header('Location: http://'.$subDomain[0].'/admin/');
+    } else {
+			if($subDomain[0] == $_siteURL) {
+				header('Location: http://m.'.$_siteURL.'/m/');
+			} else {
+				if($subDomain[0] == 'www'){
+					header('Location: http://m.'.$_siteURL.'/m/');
+				}else{
+					header('Location: http://'.$subDomain[0].'.'.$_siteURL.'/m/');
+				}
+			}
+		}
+
+	} else { // PC 접속
+
+		if($subDomain[0] == 'tutor' || $subDomain[0] == 'admin'){
+			header('Location: http://'.$subDomain[0].'.'.$_siteURL.'/admin/');
+			exit;
+
+		}else{
+			$query = "SELECT * FROM nynStudyCenter WHERE companyID='".$subDomain[0]."'";
+			$result = mysql_query($query);
+			$count = mysql_num_rows($result);
+
+			if($count > 0) {
+				header('Location: http://'.$subDomain[0].'.'.$_siteURL.'/studyCenter/');
+				exit;
+
+			} else {
+				header('Location: http://'.$_siteURL.'/main/');
+				exit;
+			}
+		}
+	}
+
+?>
+</body>
+</html>

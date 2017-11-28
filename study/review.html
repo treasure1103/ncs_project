@@ -1,0 +1,126 @@
+<? include '../lib/header.php'; ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>수강 후기</title>
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+      $('.infoArea > div h2 input[type="radio"]').change(function(){
+		  checkStar(this)
+	  })
+ 	  checkStar($('.infoArea > div h2 input[type="radio"]:checked'))
+  });
+  function sendData(formClass){	  
+	  if($('textarea[name="content"]').val() != ''){
+		  $('textarea[name="content"]').val($('textarea[name="content"]').val().replace(/\n/g,''))
+		  var sendSerial = $('form.'+formClass).serialize();
+		  if(confirm("수강 후기를 등록 하시겠습니까?")){
+			  $.ajax({
+				  url: '../api/apiBoard.php',
+				  type:'POST',
+				  data:sendSerial,
+				  dataType:'text',
+				  success:function(data){
+					  alert('등록 되었습니다.');
+					  self.close();
+				  },
+				  fail:function(){
+					  alert('등록에 실패하였습니다.');
+				  }
+			  })
+			  
+		  }
+	  }else{
+		 alert('수강 후기 내용이 없습니다.');
+	  }
+  }
+  function checkStar(obj){
+	  var reviewCnt = ($(obj).val())
+	  var i = 0
+	  $('.infoArea > div h2 strong').html(reviewCnt)
+      $('.infoArea > div h2 label').css('background-position','bottom')
+	  for(i = 0; i<reviewCnt; i++){
+	      $('.infoArea > div h2 label:eq('+i+')').css('background-position','top')
+	  }
+  }
+</script>
+<style type="text/css">
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+/* font-family: 'Nanum Myeongjo', serif; */
+body { overflow:hidden; }
+
+div.infoArea { position:fixed; top:0; left:0; width:100%; height:100%; background:#f7f7f7; z-index:999; }
+div.infoArea > h1 { margin:0; padding:0; border-bottom:1px dashed #ccc; background:#fff; text-align:center; line-height:60px; font-size:20px; color:#0780c2; }
+div.infoArea > div { padding:15px 20px; }
+div.infoArea > div h2 { padding-left:22px; line-height:22px; font-size:15px; background:url(../images/study/bg_review_title.png) no-repeat left 3px; }
+div.infoArea > div h2 span { line-height:32px; }
+div.infoArea > div h2 div { overflow:hidden; float:right; padding:5px 12px 8px; margin-bottom:12px; background:#fff; border:1px solid #ccc; color:#999; font-weight:normal; }
+div.infoArea > div h2 div strong { padding-left:10px; font-size:20px; color:#343434; }
+div.infoArea > div h2 input { display:none; }
+div.infoArea > div h2 label { float:left; display:block; width:23px; height:22px; background-image:url(../images/study/img_review_star.png); background-repeat:no-repeat; background-position:center top;  }
+div.infoArea > div ul { padding:0; margin:10px 0 10px 38px; color:#666; }
+div.infoArea > div ul li { padding:3px 0; font-size:12px; line-height:16px; padding-left:0; }
+div.infoArea > div textarea { display:block; width:93%; height:180px; margin:10px 0 0 23px; border:1px solid #ccc; background:#fff; font-size:12px; color:#000; }
+div.infoArea button { display:block; width:95%; height:45px; margin:15px 0 0 22px; border:1px solid #454545; background:#666; font-size:15px; color:#fff; font-weight:bold; cursor:pointer; }
+</style>
+</head>
+
+<body>
+<form class="writeForm" action="javascript:sendData('writeForm')">
+	<div class="infoArea">
+      <?
+          $query = "SELECT contentsName FROM nynContents WHERE contentsCode='".$_GET['contentsCode']."'";
+          $result = mysql_query($query);
+          $rs = mysql_fetch_array($result);
+
+          $queryA = "SELECT * FROM nynBoard WHERE boardCode='3' AND userID='".$_SESSION['loginUserID']."' AND addITEM01='".$_GET['contentsCode']."'";
+          $resultA = mysql_query($queryA);
+          $rsA = mysql_fetch_array($resultA);
+
+          $seq = $rsA[seq];
+          $content = $rsA[content];
+          $addItem02 = $rsA[addItem02];
+      ?>
+      <h1><?=$rs['contentsName']?></h1>
+      <div>
+		<h2>
+          <span>만족도를 선택해 주세요.</span>
+          <div>
+            <label><input type="radio" name="addItem02" value="1" <? if($addItem02=='1') { ?> checked="checked" <? } ?> /></label>
+            <label><input type="radio" name="addItem02" value="2" <? if($addItem02=='2') { ?> checked="checked" <? } ?> /></label>
+            <label><input type="radio" name="addItem02" value="3" <? if($addItem02=='3') { ?> checked="checked" <? } ?> /></label>
+            <label><input type="radio" name="addItem02" value="4" <? if($addItem02=='4') { ?> checked="checked" <? } ?> /></label>
+            <label><input type="radio" name="addItem02" value="5" <? if($addItem02=='5' || $addItem02==null || $addItem02=='') { ?> checked="checked" <? } ?> /></label>
+            <strong>5</strong>점/5점
+          </div>
+          <!--
+          <select name="addItem02">
+              <option value="5" <? if($addItem02=='5') { ?> selected <? } ?> ></option>
+              <option value="4" <? if($addItem02=='4') { ?> selected <? } ?> ></option>
+              <option value="3" <? if($addItem02=='3') { ?> selected <? } ?> ></option>
+              <option value="2" <? if($addItem02=='2') { ?> selected <? } ?> ></option>
+              <option value="1" <? if($addItem02=='1') { ?> selected <? } ?> ></option>
+          </select>
+          -->
+        </h2>
+		<h2>수강 후기 작성</h2>
+		<textarea name="content"><?=$content ?></textarea>
+        <ul>
+          <li>수강 후기를 남겨주시면 큰 힘이 됩니다.</li>
+          <li>수강 후기와 관련없거나, 적합하지 않은 내용은 통보없이 삭제될 수 있음을 알려드립니다.</li>
+        </ul>
+		<button type="submit">작성 완료</button>
+      </div>
+	</div>
+	<input type="hidden" name="seq" value="<?=$seq?>">
+	<input type="hidden" name="boardCode" value="3">
+	<input type="hidden" name="userName" value="<?=$_SESSION['loginUserName'] ?>">
+	<input type="hidden" name="userID" value="<?=$_SESSION['loginUserID'] ?>">
+	<input type="hidden" name="subject" value="<?=$rs['contentsName']?>">
+	<input type="hidden" name="addItem01" value="<?=$_GET['contentsCode']?>">
+</form>
+</body>
+
+</html>

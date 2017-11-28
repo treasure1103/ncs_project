@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>교육수료증</title>
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+  var seq = "<?=$_GET['seq'] ?>";  //seq
+  var useApi = '/api/apiStudyCert.php';
+  var printAjax = $.get(useApi,{'seq':seq,'print':'Y'},function(data){
+	  var printInfo = '';
+	  if(data.study[0].serviceType == 1){
+		  printInfo += '<li><h1>소속회사&nbsp;&nbsp;</h1>'+data.study[0].companyName+'</li>';
+	  }
+		printInfo += '<li><h1>성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명&nbsp;&nbsp;</h1>'+data.study[0].userName+'</li>';
+	  printInfo += '<li><h1>생년월일&nbsp;&nbsp;</h1>'+data.study[0].birth+'</li>';
+	  printInfo += '<li><h1>소&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;속&nbsp;&nbsp;</h1>'+data.study[0].companyName+'</li>';
+	  printInfo += '<li><h1>훈련과정&nbsp;&nbsp;</h1>'+data.study[0].contentsName+'</li>';
+	  printInfo += '<li><h1>교육장소&nbsp;&nbsp;</h1>';
+	  printInfo += '인터넷 원격교육';
+	  printInfo += '</li>';	  
+	  printInfo += '<li><h1>훈련기간&nbsp;&nbsp;</h1>';
+	  printInfo += data.study[0].lectureStart.substr(0,4)+'년 ';
+	  printInfo += data.study[0].lectureStart.substr(5,2)+'월 ';
+	  printInfo += data.study[0].lectureStart.substr(8,2)+'일&nbsp;~&nbsp;';
+	  printInfo += data.study[0].lectureEnd.substr(0,4)+'년 ';
+	  printInfo += data.study[0].lectureEnd.substr(5,2)+'월 ';
+	  printInfo += data.study[0].lectureEnd.substr(8,2)+'일';
+	  printInfo += '</li>';
+	  $('div.infoArea > ul').html(printInfo)
+	  
+	  var today = new Date();
+	  var dd = today.getDate();
+	  var mm = today.getMonth()+1; //January is 0!
+	  var yy = today.getFullYear();
+	  var eduInfo = '';
+	  eduInfo += '<div id="printArea">';
+	  eduInfo += '<h1>수&nbsp;&nbsp;&nbsp;&nbsp;료&nbsp;&nbsp;&nbsp;&nbsp;증</h1>';
+	  eduInfo += '<ul>'
+		eduInfo += '<li><h1>성&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;명&nbsp;&nbsp;</h1>'+data.study[0].userName+'</li>';
+		eduInfo += '<li><h1>생년월일&nbsp;&nbsp;</h1>'+data.study[0].birth+'</li>';
+		eduInfo += '<li><br></li>';
+		eduInfo += '<li><h1>소&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;속&nbsp;&nbsp;</h1>'+data.study[0].companyName;
+		eduInfo += '<span style="margin-left:5%;">(사업자등록번호:'+data.study[0].companyCode.substr(0,3)+'-'+data.study[0].companyCode.substr(3,2)+'-'+data.study[0].companyCode.substr(5,5)+')</span></li>';		
+	  eduInfo += '<li><h1>훈련과정&nbsp;&nbsp;</h1>'+data.study[0].contentsName+'</li>';	    
+	  eduInfo += '<li><h1>훈련기간&nbsp;&nbsp;</h1>';
+	  eduInfo += data.study[0].lectureStart.substr(0,4)+'. ';
+	  eduInfo += data.study[0].lectureStart.substr(5,2)+'. ';
+	  eduInfo += data.study[0].lectureStart.substr(8,2)+'&nbsp;~&nbsp;';
+	  eduInfo += data.study[0].lectureEnd.substr(0,4)+'. ';
+	  eduInfo += data.study[0].lectureEnd.substr(5,2)+'. ';
+	  eduInfo += data.study[0].lectureEnd.substr(8,2)+' ';
+	  eduInfo += '('+data.study[0].contentsTime+'H)';
+	  eduInfo += '</li>';
+		eduInfo += '<li><h1>교육장소&nbsp;&nbsp;</h1>';
+	  eduInfo += '인터넷 원격교육';
+	  eduInfo += '</li>';	
+	  eduInfo += '</ul>'
+	  eduInfo += '<p>위 사람은 근로자 직업능력개발법<br /> 제 20조 및 24조의 규정에 의하여 본 교육원이<br /> 실시한 아래의 교육을 위 기간 동안에 성실히 수행하였기에<br />  본 증서를 수여합니다.</p>';
+	  eduInfo += '<h2>'+yy+'. '+mm+'. '+dd+'</h2>'
+	  eduInfo += '<h3><img src="../attach/print/print_stamp.png" alt="NCS이러닝센터" /></h3>';
+	  eduInfo += '<div><img src="../images/study/print_img03.jpg" alt="" /></div>';
+	  eduInfo += '</div>'
+	  $('body').append(eduInfo);	  
+  })
+  
+  function printAction(){
+	  $('.infoArea').remove();
+	  window.print();
+	  self.close();
+  }
+  
+</script>
+<style type="text/css">
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+/* font-family: 'Nanum Myeongjo', serif; */
+body { overflow:hidden; }
+
+div#printArea { margin:1cm; padding:0cm; font-family:'Nanum Myeongjo', serif; }
+div#printArea > h1, div#printArea > h2, div#printArea > p, div#printArea > ul, div#printArea > h3 { position:relative; z-index:900; }
+div#printArea > h1, div#printArea > h2, div#printArea > p { text-align:center; }
+div#printArea > h1 { top:2.5cm; font-size:30pt; text-align:center; }
+div#printArea > ul, div#printArea > ul li { margin:0; padding:0; font-size:14pt; list-style:none; }
+div#printArea > ul { top:4cm; margin-left:2cm; }
+div#printArea > ul li h1 { margin-top:0.05cm; padding-right:5pt; display:inline-block; font-size:14pt; }
+div#printArea > ul li h1:after { content:':' }
+div#printArea > p { top:5cm; font-size:18pt; line-height:30pt; font-weight:bold; }
+div#printArea > h2 { top:6.5cm; font-size:18pt; }
+div#printArea > h3 { top:7cm; text-align:center; }
+div#printArea > h3 img { width:6cm; }
+div#printArea > div { position:absolute; top:0; left:0; z-index:1; width:19cm; height:27.7cm;  }
+div#printArea > div img { width:19cm; height:27.7cm; }
+
+div.infoArea { position:fixed; top:0; left:0; width:100%; height:100%; background:#f7f7f7; z-index:999; }
+div.infoArea > h1 { margin:0; padding:0; border-bottom:1px dashed #ccc; background:#fff; text-align:center; line-height:60px; font-size:20px; color:#0780c2; }
+div.infoArea > p { padding:0 40px; font-size:12px; line-height:18px; }
+div.infoArea > h2 { padding:0; margin:20px 0 0; text-align:center; line-height:45px; font-size:15px; }
+div.infoArea > ul { overflow:hidden;  margin:0; padding:0 40px; }
+div.infoArea > ul li { overflow:hidden; list-style:none; font-size:12px; line-height:22px; }
+div.infoArea > ul li h1 { display:inline-block; width:80px; font-size:12px; }
+div.infoArea > button { display:block; width:85%; height:45px; margin:40px auto; border:1px solid #454545; background:#666; font-size:15px; color:#fff; font-weight:bold; }
+</style>
+</head>
+
+<body>
+<div class="infoArea">
+  <h1>수료증 출력확인</h1>
+  <p>테두리선(상장 모양)의 출력을 원하시면 출력 옵션에서<br />배경 그래픽 출력을 선택해주세요</p>
+  <h2>정보확인</h2>
+  <ul>
+    
+  </ul>
+  <p>다음의 사항을 확인하고 수료증을 출력합니다.</p>
+  <button type="button" onclick="printAction()">수료증 출력하기</button>
+</div>
+</body>
+
+</html>

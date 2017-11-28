@@ -1,0 +1,121 @@
+<? include '../m/header.html' ?>
+<script type="text/javascript">
+  var useApi = '../api/apiStudyChapterSlim.php';
+  var contentsCode = '<?=$_GET[contentsCode]; ?>'; //검색 페이지
+  var chapter = '<?=$_GET[chapter]; ?>'; //검색 페이지
+  var check = '<?=$_GET[check]; ?>'; //검색 페이지
+  check = check ? check : '';
+  var totalStudyPage = 1;
+  var totalTime = 0;
+  var sendTime = 10000; //진도체크시간
+  var nowPageURL = '';
+  var nowPage = '';
+  
+  studyPlay();
+  
+  function studyPlay(){
+	  check = check ? check : '';
+	  var studyPopup = $.get(useApi,{'contentsCode':contentsCode,'chapter':chapter},function(data){
+		  var chapterNum = data.progress[0].chapter
+		  if(chapterNum >= 100){
+			  chapterNum = '-'
+		  }
+		  $('hgroup > h1').html('[&nbsp;'+ chapterNum + '차시&nbsp]&nbsp;' + data.progress[0].chapterName)
+		  var thumbImages = data.previewImageURL + data.previewImage;
+		  var playArea ='';
+		  totalStudyPage = data.progress[0].chapterMobileSize;
+		  $.each(data.progress, function(){
+			  if(check != 'check'){
+				  nowPageURL = this.chapterMobilePath;
+			  }else{
+				  nowPageURL = this.chapterMobilePath;
+			  }
+			  totalTime = this.totalTime;
+			  
+			  //현재페이지 검사식
+			  var filearr = nowPageURL.split("/");
+
+			  var selectFile = filearr.length -1;
+			  var nowPages = filearr[selectFile];
+			  var nowPage = nowPages.replace('.mp4','');
+			  nowPage = Number(nowPage.substr(nowPage.length -2, 2))
+			  
+			  playArea += '<video class="videoArea" ';
+			  playArea += 'poster="'+thumbImages+'" ';
+			  playArea += 'src="'+nowPageURL+'" ';
+			  playArea += 'controls></video>';
+			  playArea += '<div>';
+			  playArea += '<button type="button" class="btnPrev" onClick="jumpVideo(\'prev\','+totalStudyPage+')" title="이전"></button>';
+			  playArea += '<button type="button" class="btnList" onClick="listAct()"></button>';
+			  playArea += '<button type="button" class="btnNext" onClick="jumpVideo(\'next\','+totalStudyPage+')" title="다음"></button>';
+			  playArea += '<div><strong>'+nowPage+'</strong>&nbsp;/&nbsp;'+totalStudyPage+'</div>';			  
+			  playArea += '</div>';
+			  playArea += '<section>';
+			  playArea += '<article>';
+			  playArea += '<h1>내용전문가</h1>';
+			  playArea += this.professor.replace(/\n/g,'<br />');
+			  playArea += '</article>';
+			  playArea += '<article>';
+			  playArea += '<h1>학습목표</h1>';
+			  playArea += this.goal.replace(/\n/g,'<br />');
+			  playArea += '</article>';
+			  playArea += '<article>';
+			  playArea += '<h1>학습내용</h1>';
+			  playArea += this.content.replace(/\n/g,'<br />');
+			  playArea += '</article>';
+			  playArea += '</section>';
+		  })
+		  $('div#viewMovie').append(playArea);
+	  })
+	  .done(function(){
+		  window.resizeTo(380,480)
+	  })
+  }
+  function jumpVideo(control,totalSize){
+	  var videoURL = $('#viewMovie > video').attr('src')
+	  videoURL = videoURL.replace('.mp4','');
+	  var jumpPage = Number(videoURL.substr(videoURL.length-2, 2))
+	  if(control == 'prev'){
+		  var jumpPages = jumpPage-1
+	  }else if(control == 'next'){
+		  var jumpPages = jumpPage+1
+	  }
+   	  if(jumpPages <= 9){
+		  jumpPages = '0'+jumpPages;
+	  }
+	  
+	  var jumpVideo = videoURL.substr(0, videoURL.length-2)
+	  if(control == 'prev'){
+		  if(jumpPage==1){
+			  alert('첫페이지입니다.')
+		  }else{
+			  $('#viewMovie > video').attr('src',jumpVideo+jumpPages+'.mp4')
+			  $('#viewMovie > div > div > strong').html(Number(jumpPages))
+			  progressSend();
+		  }
+	  }else if(control == 'next'){
+		  if(jumpPage==totalSize){
+			  alert('마지막페이지입니다.')
+		  }else{
+			  $('#viewMovie > video').attr('src',jumpVideo+jumpPages+'.mp4')
+			  $('#viewMovie > div > div > strong').html(Number(jumpPages))
+			  progressSend();
+		  }
+	  }
+  }
+
+</script>
+</head>
+
+<body id="studyPage">
+<header>
+  <h1>내 강의실</h1>
+</header>
+<hgroup>
+  <h1></h1>
+</hgroup>
+<div id="viewMovie">
+
+</div>
+</body>
+</html>

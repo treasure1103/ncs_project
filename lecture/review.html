@@ -1,0 +1,82 @@
+<? include '../lib/header.php'; ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>수강 후기</title>
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../frontScript/_pager.js"></script>
+<script type="text/javascript">
+  var contentsCode = '<?=$_GET[contentsCode] ?>'
+  var page=1;
+  var listCount = 6;
+  var pagerCount = 6;
+  var totalCount = 0;
+  $(document).ready(function(){
+	  ajaxAct();
+  });
+  function ajaxAct(){
+	  $.get('../api/apiBoard.php',{'boardCode':'3','list':listCount,'page':page,'addItem01':contentsCode},function(data){
+		  var titles = data.board[0].subject;
+		  $('.infoArea > h1').html(titles)
+		  totalCount = data.totalCount
+		  var reviewWrite = '';
+		  $.each(data.board, function(){
+			  reviewWrite += '<li>';
+			  reviewWrite += '<div>';
+			  reviewWrite += '<h3 class="scroe'+this.addItem02+'">[ <strong>'+this.addItem02+'</strong>/5점 ]</h3>';
+			  reviewWrite += '<h1>'+this.userName.substr(0,this.userName.length-1)+'*('+this.userID.substr(0,this.userID.length-3)+'***)</h1>';
+			  reviewWrite += '<h2>Date : '+this.inputDate+' | IP : '+this.userIP+'</h2>';
+			  reviewWrite += '<p>'+this.content+'</p>';
+			  reviewWrite += '</div>';
+			  reviewWrite += '</li>';
+		  })
+		  $('.infoArea ul').html(reviewWrite)
+		  pagerAct();
+	  })
+  }
+</script>
+<style type="text/css">
+@import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+/* font-family: 'Nanum Myeongjo', serif; */
+body { overflow:hidden; }
+
+div.infoArea { position:fixed; top:0; left:0; width:100%; height:100%; background:#efefef; z-index:999; }
+div.infoArea > h1 { margin:0; padding:0; border-top:3px solid #0780c2; border-bottom:1px solid #343434; background:#fff; text-align:center; line-height:60px; font-size:20px; color:#0780c2; }
+div.infoArea > div { }
+div.infoArea > div ul, div.infoArea > div li { overflow:hidden; margin:0; padding:0; list-style:none; }
+div.infoArea > div ul { overflow-y:scroll; height:380px; background:#fff; }
+div.infoArea > div li { padding:10px 0; border-bottom:1px solid #ccc; background:#fff; }
+div.infoArea > div h3 { overflow:hidden; float:left; width:120px; height:80px; margin:0; padding:0; text-align:center; line-height:110px; font-weight:normal; color:#787878; }
+div.infoArea > div h3 strong { font-size:20px; font-weight:800; color:#343434; }
+div.infoArea > div h3.scroe1 { background:url(../images/lecture/bg_score1.png) no-repeat 10px 10px; }
+div.infoArea > div h3.scroe2 { background:url(../images/lecture/bg_score2.png) no-repeat 10px 10px; }
+div.infoArea > div h3.scroe3 { background:url(../images/lecture/bg_score3.png) no-repeat 10px 10px; }
+div.infoArea > div h3.scroe4 { background:url(../images/lecture/bg_score4.png) no-repeat 10px 10px; }
+div.infoArea > div h3.scroe5 { background:url(../images/lecture/bg_score5.png) no-repeat 10px 10px; }
+div.infoArea > div h1, div.infoArea > div h2, div.infoArea > div p { margin:0 0 0 135px; padding:0; border-left:1px solid #ccc; }
+div.infoArea > div h1, div.infoArea > div h2 { padding-left:10px; }
+div.infoArea > div h1 { line-height:24px; font-size:15px; }
+div.infoArea > div h2 { line-height:18px; font-size:12px; color:#999; }
+div.infoArea > div p { padding:10px; font-size:14px; line-height:20px; }
+div.infoArea > div + div { border-top:none; }
+/* Paser */
+div.pager { overflow:hidden; padding:10px 0; text-align:center; }
+div.pager a, div.pager b, div.pager button { vertical-align:middle; background:#fff; }
+div.pager button { height:32px; border:none; margin:0; background-color:transparent; }
+div.pager button img { vertical-align:middle; }
+div.pager a, div.pager b { display:inline-block; height:32px; padding:0 10px; text-align:center; line-height:32px; font-size:15px; vertical-align:middle; }
+div.pager a { color:#787878; text-decoration:none; }
+div.pager b { border:1px solid #999; margin:3px 0 5px; color:#ec772d; }
+div.pager a:hover { text-decoration:underline; }
+</style>
+</head>
+
+<body>
+  <div class="infoArea">
+    <h1></h1>
+	<div id="contentsArea"><ul></ul></div>	
+  </div>
+</body>
+
+</html>
